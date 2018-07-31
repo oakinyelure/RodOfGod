@@ -10,8 +10,8 @@ export class HomepageComponent implements OnInit {
   constructor() { }
 
   isFindDistanceClicked: boolean = false;
-
   userDistanceToChurch:number;
+  errorMessage: string;
 
   ngOnInit() {
   }
