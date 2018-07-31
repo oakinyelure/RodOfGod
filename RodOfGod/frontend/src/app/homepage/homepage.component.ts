@@ -14,10 +14,10 @@ export class HomepageComponent implements OnInit {
   errorMessage: string;
 
   ngOnInit() {
+    
   }
 
   getUserDistanceToChurch() {
-    
   }
 
 }
