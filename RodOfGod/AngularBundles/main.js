@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div style=\"text-align:center\">\r\n  <h1>\r\n    Welcome to {{ title }}!\r\n  </h1>\r\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n</div>\r\n<h2>Here are some links to help you start: </h2>\r\n<ul>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\r\n  </li>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\r\n  </li>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\r\n  </li>\r\n</ul>\r\n\r\n"
+module.exports = "<div class=\"app-container\">\r\n  <app-homepage></app-homepage>\r\n</div>"
 
 /***/ }),
 
@@ -135,7 +135,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    background-size: cover;\r\n    color: #fff;\r\n    text-align: center;\r\n    text-rendering: optimizeLegibility;\r\n    margin: 0;\r\n    padding: 15px 10px 15px;\r\n    height:100vh;\r\n}\r\ndiv.landing-content h1 {\r\n    margin: 0;\r\n    position: absolute;\r\n    top: 38%;\r\n    left: 50%;\r\n    margin-right: -50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    font-size: 6em;\r\n    font-family: \"colfax-web\",\"sans-serif\";\r\n    font-weight: 600;\r\n    letter-spacing: -.5px;\r\n }\r\ndiv.landing-content input {\r\n    margin: 0;\r\n    position: absolute;\r\n    top: 55%;\r\n    left: 40%;\r\n    margin-right: -50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    width: 300px;\r\n    height: 5em;\r\n    padding: 20px;\r\n}\r\ninput::-webkit-input-placeholder {\r\n    font-size: 25px;\r\n    font-family: 'Times New Roman', Times, serif;\r\n\r\n}\r\ndiv.landing-content button{\r\n    margin: 0;\r\n    position: absolute;\r\n    top: 55%;\r\n    left: 62%;\r\n    margin-right: -50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    width: 300px;\r\n    height: 3.253em;\r\n    font-size: 25px;\r\n    font-family: 'Times New Roman', Times, serif;\r\n\r\n}"
 
 /***/ }),
 
@@ -146,7 +146,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  homepage works!\n</p>\n"
+module.exports = "<div class=\"landing-content\">\r\n  <h1>  Welcome To ROG</h1>\r\n  <p>\r\n      <input class=\"btn btn--input btn--corners finder-input palm-wide-two-thirds palm-one-whole portable-full-width handheld-full-width portable-push-quarter--bottom handheld-push-quarter--bottom\" type=\"text\" placeholder=\"Enter Your Address\" data-dynamic-link-value=\"1\">  \r\n      <button type=\"button\" class=\"btn btn-success\">Find Your Distance</button>\r\n  </p>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -251,7 +251,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\oakin\Documents\public_dev\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Anako\source\repos\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })
