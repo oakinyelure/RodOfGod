@@ -86,6 +86,47 @@ var AboutComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/about/about.module.ts":
+/*!***************************************!*\
+  !*** ./src/app/about/about.module.ts ***!
+  \***************************************/
+/*! exports provided: AboutModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutModule", function() { return AboutModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _about_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about.component */ "./src/app/about/about.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AboutModule = /** @class */ (function () {
+    function AboutModule() {
+    }
+    AboutModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+            ],
+            declarations: [_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"]],
+            exports: [_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"]]
+        })
+    ], AboutModule);
+    return AboutModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app-routing.module.ts":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -98,7 +139,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _main_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main-components */ "./src/app/main-components.ts");
+/* harmony import */ var _nav_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav-components */ "./src/app/nav-components.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -109,14 +150,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var routes = [
-    { path: 'home', component: _main_components__WEBPACK_IMPORTED_MODULE_2__["HomePageComponent"] },
+    { path: 'home', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["HomePageComponent"] },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'livesermon', component: _main_components__WEBPACK_IMPORTED_MODULE_2__["WatchOnlineComponent"] },
-    { path: 'about', component: _main_components__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"] },
-    { path: 'blog', component: _main_components__WEBPACK_IMPORTED_MODULE_2__["BlogComponent"] },
-    { path: 'give', component: _main_components__WEBPACK_IMPORTED_MODULE_2__["GiveComponent"] },
-    { path: 'message-store', component: _main_components__WEBPACK_IMPORTED_MODULE_2__["MessageStoreComponent"] },
-    { path: 'music-store', component: _main_components__WEBPACK_IMPORTED_MODULE_2__["MusicStoreComponent"] },
+    { path: 'livesermon', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["WatchOnlineComponent"] },
+    { path: 'about', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"] },
+    { path: 'blog', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["BlogComponent"] },
+    { path: 'give', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["GiveComponent"] },
+    { path: 'message-store', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["MessageStoreComponent"] },
+    { path: 'music-store', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["MusicStoreComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -203,15 +244,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _home_page_homepage_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home-page/homepage.component */ "./src/app/home-page/homepage.component.ts");
+/* harmony import */ var _nav_modules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav-modules */ "./src/app/nav-modules.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! .//app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _watch_online_watch_online_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./watch-online/watch-online.component */ "./src/app/watch-online/watch-online.component.ts");
-/* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
-/* harmony import */ var _give_give_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./give/give.component */ "./src/app/give/give.component.ts");
-/* harmony import */ var _blog_blog_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blog/blog.component */ "./src/app/blog/blog.component.ts");
-/* harmony import */ var _message_store_message_store_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./message-store/message-store.component */ "./src/app/message-store/message-store.component.ts");
-/* harmony import */ var _music_store_music_store_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./music-store/music-store.component */ "./src/app/music-store/music-store.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -223,33 +258,27 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-
-
-
-
-
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-                _home_page_homepage_component__WEBPACK_IMPORTED_MODULE_3__["HomePageComponent"],
-                _watch_online_watch_online_component__WEBPACK_IMPORTED_MODULE_5__["WatchOnlineComponent"],
-                _about_about_component__WEBPACK_IMPORTED_MODULE_6__["AboutComponent"],
-                _give_give_component__WEBPACK_IMPORTED_MODULE_7__["GiveComponent"],
-                _blog_blog_component__WEBPACK_IMPORTED_MODULE_8__["BlogComponent"],
-                _message_store_message_store_component__WEBPACK_IMPORTED_MODULE_9__["MessageStoreComponent"],
-                _music_store_music_store_component__WEBPACK_IMPORTED_MODULE_10__["MusicStoreComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
+                _nav_modules__WEBPACK_IMPORTED_MODULE_2__["HomePageModule"],
+                _nav_modules__WEBPACK_IMPORTED_MODULE_2__["MessageStoreModule"],
+                _nav_modules__WEBPACK_IMPORTED_MODULE_2__["WatchOnlineModule"],
+                _nav_modules__WEBPACK_IMPORTED_MODULE_2__["AboutModule"],
+                _nav_modules__WEBPACK_IMPORTED_MODULE_2__["BlogModule"],
+                _nav_modules__WEBPACK_IMPORTED_MODULE_2__["GiveModule"],
+                _nav_modules__WEBPACK_IMPORTED_MODULE_2__["MusicStoreModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -322,6 +351,47 @@ var BlogComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/blog/blog.module.ts":
+/*!*************************************!*\
+  !*** ./src/app/blog/blog.module.ts ***!
+  \*************************************/
+/*! exports provided: BlogModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogModule", function() { return BlogModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _blog_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blog.component */ "./src/app/blog/blog.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var BlogModule = /** @class */ (function () {
+    function BlogModule() {
+    }
+    BlogModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+            ],
+            declarations: [_blog_component__WEBPACK_IMPORTED_MODULE_2__["BlogComponent"]],
+            exports: [_blog_component__WEBPACK_IMPORTED_MODULE_2__["BlogComponent"]]
+        })
+    ], BlogModule);
+    return BlogModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/give/give.component.css":
 /*!*****************************************!*\
   !*** ./src/app/give/give.component.css ***!
@@ -385,6 +455,91 @@ var GiveComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/give/give.module.ts":
+/*!*************************************!*\
+  !*** ./src/app/give/give.module.ts ***!
+  \*************************************/
+/*! exports provided: GiveModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GiveModule", function() { return GiveModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _give_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./give.component */ "./src/app/give/give.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var GiveModule = /** @class */ (function () {
+    function GiveModule() {
+    }
+    GiveModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+            ],
+            declarations: [_give_component__WEBPACK_IMPORTED_MODULE_2__["GiveComponent"]],
+            exports: [_give_component__WEBPACK_IMPORTED_MODULE_2__["GiveComponent"]]
+        })
+    ], GiveModule);
+    return GiveModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/home-page/home-page.module.ts":
+/*!***********************************************!*\
+  !*** ./src/app/home-page/home-page.module.ts ***!
+  \***********************************************/
+/*! exports provided: HomePageModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _homepage_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./homepage.component */ "./src/app/home-page/homepage.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var HomePageModule = /** @class */ (function () {
+    function HomePageModule() {
+    }
+    HomePageModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"]
+            ],
+            declarations: [_homepage_component__WEBPACK_IMPORTED_MODULE_3__["HomePageComponent"]],
+            exports: [_homepage_component__WEBPACK_IMPORTED_MODULE_3__["HomePageComponent"]]
+        })
+    ], HomePageModule);
+    return HomePageModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/home-page/homepage.component.css":
 /*!**************************************************!*\
   !*** ./src/app/home-page/homepage.component.css ***!
@@ -403,7 +558,7 @@ module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"landing-content\">\r\n  <div class=\"header-one page-header\">Rod of God</div>\r\n  <div class=\"homepage-form\">\r\n    <div class=\"container\">\r\n        <form>\r\n            <input class=\"input\" [(ngModel)]=\"userAddress\" type=\"text\" placeholder=\"Enter your Address\">\r\n            <button (click)=\"getDistanceToChurch($event)\" class=\"submit\" type=\"submit\">Distance to Church</button>\r\n        </form>\r\n        \r\n    </div>  \r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"landing-content\">\r\n  <div class=\"header-one page-header\">Rod of God</div>\r\n  <div class=\"homepage-form\">\r\n    <div class=\"containers\">\r\n        <input class=\"input\" [(ngModel)]=\"userAddress.name\" type=\"text\" placeholder=\"Enter your Address\">\r\n        <button (click)=\"getDistanceToChurch($event)\" class=\"submit\" type=\"submit\">Distance to Church</button>\r\n    </div>  \r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -431,8 +586,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var HomePageComponent = /** @class */ (function () {
     function HomePageComponent() {
         this.isFindDistanceClicked = false;
+        this.userAddress = {
+            id: 6,
+            name: "fgf"
+        };
     }
     HomePageComponent.prototype.ngOnInit = function () {
+        this.userAddress.name = "fhvhg";
     };
     HomePageComponent.prototype.getDistanceToChurch = function (event) {
         event.preventDefault();
@@ -448,47 +608,6 @@ var HomePageComponent = /** @class */ (function () {
     ], HomePageComponent);
     return HomePageComponent;
 }());
-
-
-
-/***/ }),
-
-/***/ "./src/app/main-components.ts":
-/*!************************************!*\
-  !*** ./src/app/main-components.ts ***!
-  \************************************/
-/*! exports provided: HomePageComponent, BlogComponent, AboutComponent, GiveComponent, MessageStoreComponent, MusicStoreComponent, WatchOnlineComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _home_page_homepage_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home-page/homepage.component */ "./src/app/home-page/homepage.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "HomePageComponent", function() { return _home_page_homepage_component__WEBPACK_IMPORTED_MODULE_0__["HomePageComponent"]; });
-
-/* harmony import */ var _blog_blog_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blog/blog.component */ "./src/app/blog/blog.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BlogComponent", function() { return _blog_blog_component__WEBPACK_IMPORTED_MODULE_1__["BlogComponent"]; });
-
-/* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AboutComponent", function() { return _about_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"]; });
-
-/* harmony import */ var _give_give_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./give/give.component */ "./src/app/give/give.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GiveComponent", function() { return _give_give_component__WEBPACK_IMPORTED_MODULE_3__["GiveComponent"]; });
-
-/* harmony import */ var _message_store_message_store_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./message-store/message-store.component */ "./src/app/message-store/message-store.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MessageStoreComponent", function() { return _message_store_message_store_component__WEBPACK_IMPORTED_MODULE_4__["MessageStoreComponent"]; });
-
-/* harmony import */ var _music_store_music_store_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./music-store/music-store.component */ "./src/app/music-store/music-store.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MusicStoreComponent", function() { return _music_store_music_store_component__WEBPACK_IMPORTED_MODULE_5__["MusicStoreComponent"]; });
-
-/* harmony import */ var _watch_online_watch_online_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./watch-online/watch-online.component */ "./src/app/watch-online/watch-online.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WatchOnlineComponent", function() { return _watch_online_watch_online_component__WEBPACK_IMPORTED_MODULE_6__["WatchOnlineComponent"]; });
-
-
-
-
-
-
-
 
 
 
@@ -551,6 +670,47 @@ var MessageStoreComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], MessageStoreComponent);
     return MessageStoreComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/message-store/message-store.module.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/message-store/message-store.module.ts ***!
+  \*******************************************************/
+/*! exports provided: MessageStoreModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MessageStoreModule", function() { return MessageStoreModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _message_store_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./message-store.component */ "./src/app/message-store/message-store.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var MessageStoreModule = /** @class */ (function () {
+    function MessageStoreModule() {
+    }
+    MessageStoreModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+            ],
+            declarations: [_message_store_component__WEBPACK_IMPORTED_MODULE_2__["MessageStoreComponent"]],
+            exports: [_message_store_component__WEBPACK_IMPORTED_MODULE_2__["MessageStoreComponent"]]
+        })
+    ], MessageStoreModule);
+    return MessageStoreModule;
 }());
 
 
@@ -620,6 +780,129 @@ var MusicStoreComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/music-store/music-store.module.ts":
+/*!***************************************************!*\
+  !*** ./src/app/music-store/music-store.module.ts ***!
+  \***************************************************/
+/*! exports provided: MusicStoreModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MusicStoreModule", function() { return MusicStoreModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _music_store_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./music-store.component */ "./src/app/music-store/music-store.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var MusicStoreModule = /** @class */ (function () {
+    function MusicStoreModule() {
+    }
+    MusicStoreModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+            ],
+            declarations: [_music_store_component__WEBPACK_IMPORTED_MODULE_2__["MusicStoreComponent"]],
+            exports: [_music_store_component__WEBPACK_IMPORTED_MODULE_2__["MusicStoreComponent"]]
+        })
+    ], MusicStoreModule);
+    return MusicStoreModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/nav-components.ts":
+/*!***********************************!*\
+  !*** ./src/app/nav-components.ts ***!
+  \***********************************/
+/*! exports provided: HomePageComponent, BlogComponent, AboutComponent, GiveComponent, MessageStoreComponent, MusicStoreComponent, WatchOnlineComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _home_page_homepage_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home-page/homepage.component */ "./src/app/home-page/homepage.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "HomePageComponent", function() { return _home_page_homepage_component__WEBPACK_IMPORTED_MODULE_0__["HomePageComponent"]; });
+
+/* harmony import */ var _blog_blog_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blog/blog.component */ "./src/app/blog/blog.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BlogComponent", function() { return _blog_blog_component__WEBPACK_IMPORTED_MODULE_1__["BlogComponent"]; });
+
+/* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AboutComponent", function() { return _about_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"]; });
+
+/* harmony import */ var _give_give_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./give/give.component */ "./src/app/give/give.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GiveComponent", function() { return _give_give_component__WEBPACK_IMPORTED_MODULE_3__["GiveComponent"]; });
+
+/* harmony import */ var _message_store_message_store_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./message-store/message-store.component */ "./src/app/message-store/message-store.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MessageStoreComponent", function() { return _message_store_message_store_component__WEBPACK_IMPORTED_MODULE_4__["MessageStoreComponent"]; });
+
+/* harmony import */ var _music_store_music_store_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./music-store/music-store.component */ "./src/app/music-store/music-store.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MusicStoreComponent", function() { return _music_store_music_store_component__WEBPACK_IMPORTED_MODULE_5__["MusicStoreComponent"]; });
+
+/* harmony import */ var _watch_online_watch_online_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./watch-online/watch-online.component */ "./src/app/watch-online/watch-online.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WatchOnlineComponent", function() { return _watch_online_watch_online_component__WEBPACK_IMPORTED_MODULE_6__["WatchOnlineComponent"]; });
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/app/nav-modules.ts":
+/*!********************************!*\
+  !*** ./src/app/nav-modules.ts ***!
+  \********************************/
+/*! exports provided: HomePageModule, BlogModule, AboutModule, GiveModule, MessageStoreModule, MusicStoreModule, WatchOnlineModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _home_page_home_page_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home-page/home-page.module */ "./src/app/home-page/home-page.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return _home_page_home_page_module__WEBPACK_IMPORTED_MODULE_0__["HomePageModule"]; });
+
+/* harmony import */ var _blog_blog_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blog/blog.module */ "./src/app/blog/blog.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BlogModule", function() { return _blog_blog_module__WEBPACK_IMPORTED_MODULE_1__["BlogModule"]; });
+
+/* harmony import */ var _about_about_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about/about.module */ "./src/app/about/about.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AboutModule", function() { return _about_about_module__WEBPACK_IMPORTED_MODULE_2__["AboutModule"]; });
+
+/* harmony import */ var _give_give_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./give/give.module */ "./src/app/give/give.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GiveModule", function() { return _give_give_module__WEBPACK_IMPORTED_MODULE_3__["GiveModule"]; });
+
+/* harmony import */ var _message_store_message_store_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./message-store/message-store.module */ "./src/app/message-store/message-store.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MessageStoreModule", function() { return _message_store_message_store_module__WEBPACK_IMPORTED_MODULE_4__["MessageStoreModule"]; });
+
+/* harmony import */ var _music_store_music_store_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./music-store/music-store.module */ "./src/app/music-store/music-store.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MusicStoreModule", function() { return _music_store_music_store_module__WEBPACK_IMPORTED_MODULE_5__["MusicStoreModule"]; });
+
+/* harmony import */ var _watch_online_watch_online_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./watch-online/watch-online.module */ "./src/app/watch-online/watch-online.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WatchOnlineModule", function() { return _watch_online_watch_online_module__WEBPACK_IMPORTED_MODULE_6__["WatchOnlineModule"]; });
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
 /***/ "./src/app/watch-online/watch-online.component.css":
 /*!*********************************************************!*\
   !*** ./src/app/watch-online/watch-online.component.css ***!
@@ -677,6 +960,47 @@ var WatchOnlineComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], WatchOnlineComponent);
     return WatchOnlineComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/watch-online/watch-online.module.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/watch-online/watch-online.module.ts ***!
+  \*****************************************************/
+/*! exports provided: WatchOnlineModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WatchOnlineModule", function() { return WatchOnlineModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _watch_online_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./watch-online.component */ "./src/app/watch-online/watch-online.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var WatchOnlineModule = /** @class */ (function () {
+    function WatchOnlineModule() {
+    }
+    WatchOnlineModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+            ],
+            declarations: [_watch_online_component__WEBPACK_IMPORTED_MODULE_2__["WatchOnlineComponent"]],
+            exports: [_watch_online_component__WEBPACK_IMPORTED_MODULE_2__["WatchOnlineComponent"]]
+        })
+    ], WatchOnlineModule);
+    return WatchOnlineModule;
 }());
 
 
