@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44390</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -279,5 +279,8 @@
   <Target Name="NgDev" BeforeTargets="Build" Condition="'$(Configuration)' == 'Dev'">
     <Message Text="ng build - dev" />
     <Exec WorkingDirectory="$(ProjectDir)frontend" Command="ng build --configuration=dev" />
+  </Target>
+  <Target Name="NgRelease" BeforeTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Exec WorkingDirectory="$(ProjectDir)frontend" Command="ng build --prod" />
   </Target>
 </Project>

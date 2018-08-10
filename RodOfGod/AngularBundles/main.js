@@ -134,7 +134,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    background-size: cover;\r\n    color: #fff;\r\n    text-align: center;\r\n    text-rendering: optimizeLegibility;\r\n    margin: 0;\r\n    padding: 15px 10px 15px;\r\n    height:100vh;\r\n}\r\ndiv.landing-content h1 {\r\n    margin: 0;\r\n    position: absolute;\r\n    top: 38%;\r\n    left: 50%;\r\n    margin-right: -50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    font-size: 6em;\r\n    font-family: \"colfax-web\",\"sans-serif\";\r\n    font-weight: 600;\r\n    letter-spacing: -.5px;\r\n }\r\ndiv.landing-content input {\r\n    margin: 0;\r\n    position: absolute;\r\n    top: 55%;\r\n    left: 40%;\r\n    margin-right: -50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    width: 300px;\r\n    height: 5em;\r\n    padding: 20px;\r\n}\r\ninput::-webkit-input-placeholder {\r\n    font-size: 25px;\r\n    font-family: 'Times New Roman', Times, serif;\r\n\r\n}\r\ndiv.landing-content button{\r\n    margin: 0;\r\n    position: absolute;\r\n    top: 55%;\r\n    left: 62%;\r\n    margin-right: -50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    width: 300px;\r\n    height: 3.253em;\r\n    font-size: 25px;\r\n    font-family: 'Times New Roman', Times, serif;\r\n\r\n}"
+module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    background-size: cover;\r\n    color: #fff;\r\n    text-align: center;\r\n    text-rendering: optimizeLegibility;\r\n    margin: auto;\r\n    padding: 15px 10px 15px;\r\n    height:100vh;\r\n    width: 100%;\r\n    position: relative;\r\n}\r\n.landing-content h1 {\r\n    margin-top: 10%;\r\n    position: relative;\r\n    font-size: 50px;\r\n    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;\r\n    font-weight: bolder;\r\n\r\n}\r\n.homepage-form {\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    position: relative;\r\n}\r\n.container {\r\n    width:auto;\r\n    height:auto;\r\n    text-align:justify;\r\n    justify-content: center;\r\n}\r\n.input,\r\n.submit {\r\n    display: inline-block;\r\n    padding: 10px 15px;\r\n    font-size: 20px;\r\n    border-radius: 1px;\r\n    -webkit-appearance: none;\r\n}\r\n.input {\r\n    border: 1px solid lightgray;\r\n    margin-right: 1.5em;\r\n    width: 300px;\r\n\r\n    border-color: #fff;\r\n    color: #1c1c1c;\r\n    font-weight: 700;\r\n    border: 3px solid transparent;\r\n    text-transform: uppercase;\r\n    letter-spacing: 0;\r\n    padding-left: 20px;\r\n    padding-right: 20px;\r\n    cursor: text;\r\n    margin-bottom: 10px;\r\n    text-align: center;\r\n}\r\n.submit {\r\n    background-color: #6bac43;\r\n    width: 300px; \r\n    font-family: colfax-web,sans-serif;\r\n    color: #fff;\r\n    border: 3px solid #6bac43;\r\n    font-weight: 700;\r\n    font-size: 20.4px;\r\n    line-height: 32px;\r\n    letter-spacing: 1px;\r\n    cursor: pointer;\r\n    position: relative;\r\n   /* vertical-align: middle;*/\r\n    display: inline-block;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    text-align: center;\r\n    overflow: hidden;\r\n    transition: all,.1s ease-in-out;\r\n}\r\n\r\n"
 
 /***/ }),
 
@@ -145,7 +145,7 @@ module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  homepage works!\r\n</p>\r\n"
+module.exports = "<div class=\"landing-content\">\r\n  <h1>Welcome To ROG</h1>\r\n  <div class=\"homepage-form\">\r\n    <div class=\"container\">\r\n        <form>\r\n            <input class=\"input\" type=\"text\" placeholder=\"Address\">\r\n            <input class=\"submit\" type=\"submit\" value=\"Find Distance\">\r\n        </form>\r\n    </div>  \r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -253,7 +253,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Anako\source\repos\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\oakin\Documents\public_dev\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })
