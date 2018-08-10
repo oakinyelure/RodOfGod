@@ -12,12 +12,18 @@ export class HomePageComponent implements OnInit {
   isFindDistanceClicked: boolean = false;
   userDistanceToChurch:number;
   errorMessage: string;
-
-  ngOnInit() {
-    
+  userAddress = {
+    id: 6,
+    name: "fgf"
   }
 
-  getUserDistanceToChurch() {
+  ngOnInit() {
+    this.userAddress.name = "fhvhg";
+  }
+
+  getDistanceToChurch(event) {
+    event.preventDefault();
+    console.log(event);
   }
 
 }

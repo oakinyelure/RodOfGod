@@ -1,11 +1,9 @@
 <div class="landing-content">
-  <h1>Welcome To ROG</h1>
+  <div class="header-one page-header">Rod of God</div>
   <div class="homepage-form">
-    <div class="container">
-        <form>
-            <input class="input" type="text" placeholder="Address">
-            <input class="submit" type="submit" value="Find Distance">
-        </form>
+    <div class="containers">
+        <input class="input" [(ngModel)]="userAddress.name" type="text" placeholder="Enter your Address">
+        <button (click)="getDistanceToChurch($event)" class="submit" type="submit">Distance to Church</button>
     </div>  
   </div>
 </div>

@@ -11,13 +11,8 @@
     width: 100%;
     position: relative;
 }
-.landing-content h1 {
-    margin-top: 10%;
-    position: relative;
-    font-size: 50px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bolder;
-
+.landing-content .page-header {
+    margin-top: 15%;
 }
 
 .homepage-form {
