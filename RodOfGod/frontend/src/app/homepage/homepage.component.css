@@ -1,0 +1,83 @@
+.landing-content {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    margin: auto;
+    padding: 15px 10px 15px;
+    height:100vh;
+    width: 100%;
+    position: relative;
+}
+.landing-content h1 {
+    margin-top: 10%;
+    position: relative;
+    font-size: 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+
+}
+
+.homepage-form {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+}
+
+
+.container {
+    width:auto;
+    height:auto;
+    text-align:justify;
+    justify-content: center;
+}    
+.input,
+.submit {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 1px;
+    -webkit-appearance: none;
+}
+
+.input {
+    border: 1px solid lightgray;
+    margin-right: 1.5em;
+    width: 300px;
+
+    border-color: #fff;
+    color: #1c1c1c;
+    font-weight: 700;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: text;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.submit {
+    background-color: #6bac43;
+    width: 300px; 
+    font-family: colfax-web,sans-serif;
+    color: #fff;
+    border: 3px solid #6bac43;
+    font-weight: 700;
+    font-size: 20.4px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+   /* vertical-align: middle;*/
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+    transition: all,.1s ease-in-out;
+}
+

@@ -134,7 +134,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    background-size: cover;\r\n    color: #fff;\r\n    text-align: center;\r\n    text-rendering: optimizeLegibility;\r\n    margin: 0;\r\n    padding: 15px 10px 15px;\r\n    height:100vh;\r\n}\r\ndiv.landing-content h1 {\r\n    margin: 0;\r\n    position: absolute;\r\n    top: 38%;\r\n    left: 50%;\r\n    margin-right: -50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    font-size: 6em;\r\n    font-family: \"colfax-web\",\"sans-serif\";\r\n    font-weight: 600;\r\n    letter-spacing: -.5px;\r\n }\r\ndiv.landing-content input {\r\n    margin: 0;\r\n    position: absolute;\r\n    top: 55%;\r\n    left: 40%;\r\n    margin-right: -50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    width: 300px;\r\n    height: 5em;\r\n    padding: 20px;\r\n}\r\ninput::-webkit-input-placeholder {\r\n    font-size: 25px;\r\n    font-family: 'Times New Roman', Times, serif;\r\n\r\n}\r\ndiv.landing-content button{\r\n    margin: 0;\r\n    position: absolute;\r\n    top: 55%;\r\n    left: 62%;\r\n    margin-right: -50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    width: 300px;\r\n    height: 3.253em;\r\n    font-size: 25px;\r\n    font-family: 'Times New Roman', Times, serif;\r\n\r\n}"
 
 /***/ }),
 
@@ -253,7 +253,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\oakin\Documents\public_dev\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Anako\source\repos\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })
