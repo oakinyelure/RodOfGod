@@ -5,52 +5,79 @@
     color: #fff;
     text-align: center;
     text-rendering: optimizeLegibility;
-    margin: 0;
+    margin: auto;
     padding: 15px 10px 15px;
     height:100vh;
+    width: 100%;
+    position: relative;
 }
-div.landing-content h1 {
-    margin: 0;
-    position: absolute;
-    top: 38%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    font-size: 6em;
-    font-family: "colfax-web","sans-serif";
-    font-weight: 600;
-    letter-spacing: -.5px;
- }
+.landing-content h1 {
+    margin-top: 10%;
+    position: relative;
+    font-size: 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
 
- 
-div.landing-content input {
-    margin: 0;
-    position: absolute;
-    top: 55%;
-    left: 40%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+}
+
+.homepage-form {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+}
+
+
+.container {
+    width:auto;
+    height:auto;
+    text-align:justify;
+    justify-content: center;
+}    
+.input,
+.submit {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 1px;
+    -webkit-appearance: none;
+}
+
+.input {
+    border: 1px solid lightgray;
+    margin-right: 1.5em;
     width: 300px;
-    height: 5em;
-    padding: 20px;
+
+    border-color: #fff;
+    color: #1c1c1c;
+    font-weight: 700;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: text;
+    margin-bottom: 10px;
+    text-align: center;
 }
-input::-webkit-input-placeholder {
-    font-size: 25px;
-    font-family: 'Times New Roman', Times, serif;
 
+.submit {
+    background-color: #6bac43;
+    width: 300px; 
+    font-family: colfax-web,sans-serif;
+    color: #fff;
+    border: 3px solid #6bac43;
+    font-weight: 700;
+    font-size: 20.4px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+   /* vertical-align: middle;*/
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+    transition: all,.1s ease-in-out;
 }
 
-
-div.landing-content button{
-    margin: 0;
-    position: absolute;
-    top: 55%;
-    left: 62%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 3.253em;
-    font-size: 25px;
-    font-family: 'Times New Roman', Times, serif;
-
-}
