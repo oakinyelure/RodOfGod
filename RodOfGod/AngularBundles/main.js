@@ -193,7 +193,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-full\">\r\n  <router-outlet></router-outlet>\r\n</div>"
+module.exports = "<div class=\"app-container\">\r\n  <app-homepage></app-homepage>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -540,6 +540,26 @@ var HomePageModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/home-page/homepage-models/user-profile.model.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/home-page/homepage-models/user-profile.model.ts ***!
+  \*****************************************************************/
+/*! exports provided: UserProfile */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserProfile", function() { return UserProfile; });
+var UserProfile = /** @class */ (function () {
+    function UserProfile() {
+    }
+    return UserProfile;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/home-page/homepage.component.css":
 /*!**************************************************!*\
   !*** ./src/app/home-page/homepage.component.css ***!
@@ -547,7 +567,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    background-size: cover;\r\n    color: #fff;\r\n    text-align: center;\r\n    text-rendering: optimizeLegibility;\r\n    margin: auto;\r\n    padding: 15px 10px 15px;\r\n    height:100vh;\r\n    width: 100%;\r\n    position: relative;\r\n}\r\n.landing-content .page-header {\r\n    margin-top: 15%;\r\n}\r\n.homepage-form {\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    position: relative;\r\n}\r\n.container {\r\n    width:auto;\r\n    height:auto;\r\n    text-align:justify;\r\n    justify-content: center;\r\n}\r\n.input,\r\n.submit {\r\n    display: inline-block;\r\n    padding: 10px 15px;\r\n    font-size: 20px;\r\n    border-radius: 1px;\r\n    -webkit-appearance: none;\r\n}\r\n.input {\r\n    border: 1px solid lightgray;\r\n    margin-right: 1.5em;\r\n    width: 300px;\r\n\r\n    border-color: #fff;\r\n    color: #1c1c1c;\r\n    font-weight: 700;\r\n    border: 3px solid transparent;\r\n    text-transform: uppercase;\r\n    letter-spacing: 0;\r\n    padding-left: 20px;\r\n    padding-right: 20px;\r\n    cursor: text;\r\n    margin-bottom: 10px;\r\n    text-align: center;\r\n}\r\n.submit {\r\n    background-color: #6bac43;\r\n    width: 300px; \r\n    font-family: colfax-web,sans-serif;\r\n    color: #fff;\r\n    border: 3px solid #6bac43;\r\n    font-weight: 700;\r\n    font-size: 20.4px;\r\n    line-height: 32px;\r\n    letter-spacing: 1px;\r\n    cursor: pointer;\r\n    position: relative;\r\n   /* vertical-align: middle;*/\r\n    display: inline-block;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    text-align: center;\r\n    overflow: hidden;\r\n    transition: all,.1s ease-in-out;\r\n}\r\n\r\n"
+module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    background-size: cover;\r\n    color: #fff;\r\n    text-align: center;\r\n    text-rendering: optimizeLegibility;\r\n    margin: auto;\r\n    padding: 15px 10px 15px;\r\n    height:100vh;\r\n    width: 100%;\r\n    position: relative;\r\n}\r\n\r\n.landing-content .page-header {\r\n    margin-top: 15%;\r\n}\r\n\r\n.submit {\r\n    background-color: #6bac43;\r\n    color: #fff;\r\n    cursor: pointer;\r\n}\r\n"
 
 /***/ }),
 
@@ -558,7 +578,7 @@ module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"landing-content\">\r\n  <div class=\"header-one page-header\">Rod of God</div>\r\n  <div class=\"homepage-form\">\r\n    <div class=\"containers\">\r\n        <input class=\"input\" [(ngModel)]=\"userAddress.name\" type=\"text\" placeholder=\"Enter your Address\">\r\n        <button (click)=\"getDistanceToChurch($event)\" class=\"submit\" type=\"submit\">Distance to Church</button>\r\n    </div>  \r\n  </div>\r\n</div>\r\n"
+module.exports = "\r\n<div class=\"landing-content\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n    <div class=\"col-sm-8\">\r\n        <div class=\"header-one page-header\">Rod of God</div>\r\n        \r\n          <form>\r\n            <input [(ngModel)]=\"userProfile.address\" name = \"address\" type=\"text\" placeholder=\"Enter your Address\">\r\n            <button (click)=\"getMembersAround($event)\" class=\"submit\" type=\"submit\">Request Ride</button>\r\n          </form>\r\n\r\n          <div class=\"rog-text-error\" *ngIf=\"errorMessage\">\r\n            <div>{{errorMessage}}</div>\r\n          </div>\r\n    </div>\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -573,6 +593,7 @@ module.exports = "<div class=\"landing-content\">\r\n  <div class=\"header-one p
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageComponent", function() { return HomePageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _homepage_models_user_profile_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homepage-models/user-profile.model */ "./src/app/home-page/homepage-models/user-profile.model.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -583,20 +604,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var HomePageComponent = /** @class */ (function () {
     function HomePageComponent() {
         this.isFindDistanceClicked = false;
-        this.userAddress = {
-            id: 6,
-            name: "fgf"
-        };
+        this.userProfile = new _homepage_models_user_profile_model__WEBPACK_IMPORTED_MODULE_1__["UserProfile"];
     }
     HomePageComponent.prototype.ngOnInit = function () {
-        this.userAddress.name = "fhvhg";
     };
-    HomePageComponent.prototype.getDistanceToChurch = function (event) {
+    HomePageComponent.prototype.getMembersAround = function (event) {
         event.preventDefault();
-        console.log(event);
+        this.submitted = true;
+        if (this.userProfile.address) {
+            this.errorMessage = "Sorry! there is no member near you";
+        }
     };
     HomePageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
