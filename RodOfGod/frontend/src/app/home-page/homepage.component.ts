@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserProfile } from './homepage-models/user-profile.model';
 
 @Component({
   selector: 'app-homepage',
@@ -12,18 +13,21 @@ export class HomePageComponent implements OnInit {
   isFindDistanceClicked: boolean = false;
   userDistanceToChurch:number;
   errorMessage: string;
-  userAddress = {
-    id: 6,
-    name: "fgf"
-  }
+  submitted: boolean;
+
+  userProfile = new UserProfile;
 
   ngOnInit() {
-    this.userAddress.name = "fhvhg";
+    
   }
 
-  getDistanceToChurch(event) {
+  getMembersAround(event) {
     event.preventDefault();
-    console.log(event);
+    this.submitted = true;
+
+    if(this.userProfile.address) {
+      this.errorMessage = "Sorry! there is no member near you";
+    }
   }
 
 }
