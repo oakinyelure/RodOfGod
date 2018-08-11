@@ -1,17 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HomePageModule, MessageStoreModule, WatchOnlineModule, AboutModule, BlogModule, GiveModule, MusicStoreModule } from './nav-modules';
 
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './homepage/homepage.component';
+import { AppRoutingModule } from './/app-routing.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomepageComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HomePageModule,
+    MessageStoreModule,
+    WatchOnlineModule,
+    AboutModule,
+    BlogModule,
+    GiveModule,
+    MusicStoreModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
