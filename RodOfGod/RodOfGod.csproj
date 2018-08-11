@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44390</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -167,6 +167,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AngularBundles\3rdpartylicenses.txt" />
+    <Content Include="AngularBundles\favicon.ico" />
+    <Content Include="AngularBundles\index.html" />
+    <Content Include="AngularBundles\main.js" />
+    <Content Include="AngularBundles\polyfills.js" />
+    <Content Include="AngularBundles\runtime.js" />
+    <Content Include="AngularBundles\scripts.js" />
+    <Content Include="AngularBundles\vendor.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -180,6 +188,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="AngularBundles\main.js.map" />
+    <Content Include="AngularBundles\polyfills.js.map" />
+    <Content Include="AngularBundles\runtime.js.map" />
+    <Content Include="AngularBundles\scripts.js.map" />
+    <Content Include="AngularBundles\vendor.js.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -208,6 +221,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -258,9 +272,15 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
+       Other similar extension points exist, see Microsoft.Common.targets.-->
+  <Target Name="NgDebug" BeforeTargets="Build" Condition="'$(Configuration)' == 'Debug'">
+    <Exec WorkingDirectory="$(ProjectDir)frontend" Command="ng build --extract-css" />
   </Target>
-  <Target Name="AfterBuild">
-  </Target> -->
+  <Target Name="NgDev" BeforeTargets="Build" Condition="'$(Configuration)' == 'Dev'">
+    <Message Text="ng build - dev" />
+    <Exec WorkingDirectory="$(ProjectDir)frontend" Command="ng build --configuration=dev" />
+  </Target>
+  <Target Name="NgRelease" BeforeTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Exec WorkingDirectory="$(ProjectDir)frontend" Command="ng build --prod" />
+  </Target>
 </Project>
