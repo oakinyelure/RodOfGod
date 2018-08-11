@@ -11,38 +11,9 @@
     width: 100%;
     position: relative;
 }
+
 .landing-content .page-header {
     margin-top: 15%;
-}
-
-.homepage-form {
-    display: flex;
-    flex-flow: row wrap;
-    position: relative;
-}
-
-
-input, button {
-    border: 1px solid lightgray;
-    margin-right: 1.5em;
-    width: 300px;
-    padding: 10px 15px;
-    border-color: #fff;
-    color: #1c1c1c;
-    font-weight: 700;
-    border: 3px solid transparent;
-    text-transform: uppercase;
-    letter-spacing: 0;
-    -webkit-appearance: none;
-    cursor: text;
-    margin-bottom: 10px;
-    justify-content: center;
-    text-align: center;
-    display: inline-flex;
-    font-family: colfax-web,sans-serif;
-    font-size: 20.4px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
 .submit {
@@ -50,4 +21,3 @@ input, button {
     color: #fff;
     cursor: pointer;
 }
-

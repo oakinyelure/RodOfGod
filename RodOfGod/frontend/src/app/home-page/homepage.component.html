@@ -6,17 +6,11 @@
 
     <div class="col-sm-8">
         <div class="header-one page-header">Rod of God</div>
-        <div class="homepage-form"></div> 
+        
           <form>
-            <input [(ngModel)]="userProfile.address" name = "address" type="text" #address="ngModel" placeholder="Enter your Address">
+            <input [(ngModel)]="userProfile.address" name = "address" type="text" placeholder="Enter your Address">
             <button (click)="getMembersAround($event)" class="submit" type="submit">Request Ride</button>
           </form>
-
-          <div *ngIf="address.invalid && submitted" class="rog-text-error">
-            <div *ngIf="address.errors.required">
-              Address is required.
-            </div>
-          </div>
 
           <div class="rog-text-error" *ngIf="errorMessage">
             <div>{{errorMessage}}</div>
