@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HomePageModule, MessageStoreModule, WatchOnlineModule, AboutModule, BlogModule, GiveModule, MusicStoreModule } from './nav-modules';
 
@@ -19,7 +20,8 @@ import { AppRoutingModule } from './/app-routing.module';
     AboutModule,
     BlogModule,
     GiveModule,
-    MusicStoreModule
+    MusicStoreModule,
+    BrowserAnimationsModule
   ],
 
   providers: [],
