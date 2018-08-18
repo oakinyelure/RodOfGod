@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserProfile } from './homepage-models/user-profile.model';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-homepage',
@@ -14,6 +15,7 @@ export class HomePageComponent implements OnInit {
   userDistanceToChurch:number;
   errorMessage: string;
   submitted: boolean;
+  faCoffee = faCoffee;
 
   userProfile = new UserProfile;
 
