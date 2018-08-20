@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 import { MatButtonModule } from '@angular/material/button';
 import { HomePageComponent } from './homepage.component';
@@ -11,7 +10,6 @@ import { HomePageComponent } from './homepage.component';
     CommonModule,
     FormsModule,
     MatButtonModule,
-    FontAwesomeModule
   ],
   declarations: [HomePageComponent],
   exports: [HomePageComponent],
