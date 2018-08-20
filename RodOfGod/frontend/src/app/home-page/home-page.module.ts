@@ -9,9 +9,10 @@ import { HomePageComponent } from './homepage.component';
   imports: [
     CommonModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   declarations: [HomePageComponent],
-  exports: [HomePageComponent]
+  exports: [HomePageComponent],
+  bootstrap:[HomePageComponent]
 })
 export class HomePageModule { }

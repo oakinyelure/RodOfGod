@@ -36,3 +36,42 @@ input, button {
     letter-spacing: 1px;
     text-transform: uppercase !important;
 }
+
+.row {
+    margin: auto !important;
+}
+
+
+@media (min-width: 320px) and (max-width: 1037px) {
+  
+    .header-one {
+        font-size: 2rem;
+    }
+
+    .route-link-button  {
+        display: block;
+        width: 300px !important;
+        text-align: center;
+    }
+
+  }
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 795px) and (max-width: 1300px) {
+  
+    .header-one {
+        font-size: 2rem;
+    }
+
+    .route-link-button  {
+        display: block;
+        width: 300px !important;
+        text-align: center;
+    }  
+    
+  }
+
