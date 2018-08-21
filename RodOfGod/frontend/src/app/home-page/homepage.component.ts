@@ -30,4 +30,12 @@ export class HomePageComponent implements OnInit {
     }
   }
 
+  /**
+   * Not the best solution but the defualt location does not work for what I wanted it for
+   * @param route
+   */
+  navigate(route: string): void {
+    window.location.assign('/#/'+route);
+  }
+
 }

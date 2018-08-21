@@ -16,12 +16,12 @@
           </div>
 
           <div class="app-routes">
-              <button class="route-link-button" mat-button>About</button>
-              <button class="route-link-button" mat-button>Watch Online</button>
-              <button class="route-link-button" mat-button>Give</button>
-              <button class="route-link-button" mat-button>Blog</button>
-              <button class="route-link-button" mat-button>Message Store</button>
-              <button class="route-link-button" mat-button>Music Store</button>
+              <button class="route-link-button" mat-button (click)="navigate('about')">about</button>
+              <button class="route-link-button" mat-button (click)="navigate('live-sermon')">live sermon</button>
+              <button class="route-link-button" mat-button (click)="navigate('give')">give</button>
+              <button class="route-link-button" mat-button (click)="navigate('blog')">blog</button>
+              <button class="route-link-button" mat-button (click)="navigate('message-store')">message store</button>
+              <button class="route-link-button" mat-button (click)="navigate('music-store')">music store</button>
           </div>
 
     </div>
