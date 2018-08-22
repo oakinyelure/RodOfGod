@@ -585,7 +585,7 @@ module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"landing-content\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n    <div class=\"col-sm-8\">\r\n        <div class=\"header-one page-header\">Rod of God</div>\r\n        \r\n          <form>\r\n            <input [(ngModel)]=\"userProfile.address\" name = \"address\" type=\"text\" placeholder=\"Enter your Address\">\r\n            <button (click)=\"getMembersAround($event)\" class=\"submit\" type=\"submit\">Request Ride</button>\r\n          </form>\r\n\r\n          <div class=\"rog-text-error\" *ngIf=\"errorMessage\">\r\n            <div>{{errorMessage}}</div>\r\n          </div>\r\n\r\n          <div class=\"app-routes\">\r\n              <button class=\"route-link-button\" mat-button>About</button>\r\n              <button class=\"route-link-button\" mat-button>Watch Online</button>\r\n              <button class=\"route-link-button\" mat-button>Give</button>\r\n              <button class=\"route-link-button\" mat-button>Blog</button>\r\n              <button class=\"route-link-button\" mat-button>Message Store</button>\r\n              <button class=\"route-link-button\" mat-button>Music Store</button>\r\n          </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<div class=\"landing-content\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n    <div class=\"col-sm-8\">\r\n        <div class=\"header-one page-header\">Rod of God</div>\r\n        \r\n          <form>\r\n            <input [(ngModel)]=\"userProfile.address\" name = \"address\" type=\"text\" placeholder=\"Enter your Address\">\r\n            <button (click)=\"getMembersAround($event)\" class=\"submit\" type=\"submit\">Request Ride</button>\r\n          </form>\r\n\r\n          <div class=\"rog-text-error\" *ngIf=\"errorMessage\">\r\n            <div>{{errorMessage}}</div>\r\n          </div>\r\n\r\n          <div class=\"app-routes\">\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('about')\">about</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('live-sermon')\">live sermon</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('give')\">give</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('blog')\">blog</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('message-store')\">message store</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('music-store')\">music store</button>\r\n          </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -625,6 +625,13 @@ var HomePageComponent = /** @class */ (function () {
         if (this.userProfile.address) {
             this.errorMessage = "Sorry! there is no member near you";
         }
+    };
+    /**
+     * Not the best solution but the defualt location does not work for what I wanted it for
+     * @param route
+     */
+    HomePageComponent.prototype.navigate = function (route) {
+        window.location.assign('/#/' + route);
     };
     HomePageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
