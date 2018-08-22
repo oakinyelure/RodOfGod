@@ -533,10 +533,11 @@ var HomePageModule = /** @class */ (function () {
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
-                _angular_material_button__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"]
+                _angular_material_button__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"],
             ],
             declarations: [_homepage_component__WEBPACK_IMPORTED_MODULE_4__["HomePageComponent"]],
-            exports: [_homepage_component__WEBPACK_IMPORTED_MODULE_4__["HomePageComponent"]]
+            exports: [_homepage_component__WEBPACK_IMPORTED_MODULE_4__["HomePageComponent"]],
+            bootstrap: [_homepage_component__WEBPACK_IMPORTED_MODULE_4__["HomePageComponent"]]
         })
     ], HomePageModule);
     return HomePageModule;
@@ -573,7 +574,7 @@ var UserProfile = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    background-size: cover;\r\n    color: #fff;\r\n    text-align: center;\r\n    text-rendering: optimizeLegibility;\r\n    margin: auto;\r\n    padding: 15px 10px 15px;\r\n    height:100vh;\r\n    width: 100%;\r\n    position: relative;\r\n}\r\n\r\n.landing-content .page-header {\r\n    margin-top: 15%;\r\n}\r\n\r\n.submit {\r\n    background-color: #6bac43;\r\n    color: #fff;\r\n    cursor: pointer;\r\n}\r\n"
+module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    background-size: cover;\r\n    color: #fff;\r\n    text-align: center;\r\n    text-rendering: optimizeLegibility;\r\n    margin: auto;\r\n    padding: 15px 10px 15px;\r\n    height:100vh;\r\n    width: 100%;\r\n    position: relative;\r\n}\r\n\r\n.landing-content .page-header {\r\n    margin-top: 15%;\r\n}\r\n\r\n.submit {\r\n    background-color: #ff4081;\r\n    color: #fff;\r\n    cursor: pointer;\r\n    margin-top: 10px;\r\n}\r\n\r\n.mat-button{\r\n    width: auto;\r\n    margin-top: 10px;\r\n    background-color: gray;\r\n    font-weight: bolder;\r\n}\r\n\r\n.mat-button:hover {\r\n    background-color: #fff;\r\n    border-color: transparent;\r\n    color: #000 !important;\r\n    font-weight: bolder;\r\n}\r\n\r\n.app-routes{\r\n\r\n    padding-top: 20px;\r\n}\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -584,7 +585,7 @@ module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"landing-content\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n    <div class=\"col-sm-8\">\r\n        <div class=\"header-one page-header\">Rod of God</div>\r\n        \r\n          <form>\r\n            <input [(ngModel)]=\"userProfile.address\" name = \"address\" type=\"text\" placeholder=\"Enter your Address\">\r\n            <button (click)=\"getMembersAround($event)\" class=\"submit\" type=\"submit\">Request Ride</button>\r\n          </form>\r\n\r\n          <div class=\"rog-text-error\" *ngIf=\"errorMessage\">\r\n            <div>{{errorMessage}}</div>\r\n          </div>\r\n\r\n          <div class=\"app-routes\">\r\n            <button mat-button color=\"accent\">ABOT</button>\r\n            <button mat-button color=\"accent\">WATCH ONLINE</button>\r\n            <button mat-button color=\"accent\">GIVE</button>\r\n            <button mat-button color=\"accent\">BLOG</button>\r\n            <button mat-button color=\"accent\">MESSAGE STORE</button>\r\n            <button mat-button color=\"accent\">MUSIC STORE</button>\r\n          </div>\r\n    </div>\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<div class=\"landing-content\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n    <div class=\"col-sm-8\">\r\n        <div class=\"header-one page-header\">Rod of God</div>\r\n        \r\n          <form>\r\n            <input [(ngModel)]=\"userProfile.address\" name = \"address\" type=\"text\" placeholder=\"Enter your Address\">\r\n            <button (click)=\"getMembersAround($event)\" class=\"submit\" type=\"submit\">Request Ride</button>\r\n          </form>\r\n\r\n          <div class=\"rog-text-error\" *ngIf=\"errorMessage\">\r\n            <div>{{errorMessage}}</div>\r\n          </div>\r\n\r\n          <div class=\"app-routes\">\r\n              <button class=\"route-link-button\" mat-button>About</button>\r\n              <button class=\"route-link-button\" mat-button>Watch Online</button>\r\n              <button class=\"route-link-button\" mat-button>Give</button>\r\n              <button class=\"route-link-button\" mat-button>Blog</button>\r\n              <button class=\"route-link-button\" mat-button>Message Store</button>\r\n              <button class=\"route-link-button\" mat-button>Music Store</button>\r\n          </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -1094,7 +1095,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\kunle\source\repos\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\oakin\Documents\public_dev\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })
