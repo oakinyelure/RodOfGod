@@ -9,8 +9,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: 'blog', component: BlogComponent},
   { path: 'give', component: GiveComponent},
-  { path: 'message-store', component: MessageStoreComponent},
-  { path: 'music-store', component: MusicStoreComponent},
+  { path: 'messagestore', component: MessageStoreComponent},
+  { path: 'musicstore', component: MusicStoreComponent},
 ];
 
 @NgModule({

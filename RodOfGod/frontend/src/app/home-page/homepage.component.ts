@@ -24,7 +24,6 @@ export class HomePageComponent implements OnInit {
   getMembersAround(event) {
     event.preventDefault();
     this.submitted = true;
-
     if(this.userProfile.address) {
       this.errorMessage = "Sorry! there is no member near you";
     }
