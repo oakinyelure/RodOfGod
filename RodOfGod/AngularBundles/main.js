@@ -156,8 +156,8 @@ var routes = [
     { path: 'about', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"] },
     { path: 'blog', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["BlogComponent"] },
     { path: 'give', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["GiveComponent"] },
-    { path: 'message-store', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["MessageStoreComponent"] },
-    { path: 'music-store', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["MusicStoreComponent"] },
+    { path: 'messagestore', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["MessageStoreComponent"] },
+    { path: 'musicstore', component: _nav_components__WEBPACK_IMPORTED_MODULE_2__["MusicStoreComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -247,13 +247,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _nav_modules__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nav-modules */ "./src/app/nav-modules.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! .//app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _core_interceptors_http_http_error_interceptor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./core/interceptors/http/http-error.interceptor */ "./src/app/core/interceptors/http/http-error.interceptor.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -269,6 +273,7 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
             ],
             imports: [
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
                 _nav_modules__WEBPACK_IMPORTED_MODULE_3__["HomePageModule"],
@@ -280,7 +285,7 @@ var AppModule = /** @class */ (function () {
                 _nav_modules__WEBPACK_IMPORTED_MODULE_3__["MusicStoreModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__["BrowserAnimationsModule"]
             ],
-            providers: [],
+            providers: [{ provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HTTP_INTERCEPTORS"], useClass: _core_interceptors_http_http_error_interceptor__WEBPACK_IMPORTED_MODULE_7__["ErrorInterceptor"], multi: true },],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
@@ -324,6 +329,7 @@ module.exports = "<p>\r\n  blog works!\r\n</p>\r\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogComponent", function() { return BlogComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _blog_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blog.service */ "./src/app/blog/blog.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -334,10 +340,15 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var BlogComponent = /** @class */ (function () {
-    function BlogComponent() {
+    function BlogComponent(blogService) {
+        this.blogService = blogService;
     }
     BlogComponent.prototype.ngOnInit = function () {
+        this.blogService.getAllBlogs().subscribe(function (response) {
+            console.log(response);
+        });
     };
     BlogComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -345,7 +356,7 @@ var BlogComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./blog.component.html */ "./src/app/blog/blog.component.html"),
             styles: [__webpack_require__(/*! ./blog.component.css */ "./src/app/blog/blog.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_blog_service__WEBPACK_IMPORTED_MODULE_1__["BlogService"]])
     ], BlogComponent);
     return BlogComponent;
 }());
@@ -389,6 +400,165 @@ var BlogModule = /** @class */ (function () {
         })
     ], BlogModule);
     return BlogModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/blog/blog.service.ts":
+/*!**************************************!*\
+  !*** ./src/app/blog/blog.service.ts ***!
+  \**************************************/
+/*! exports provided: BlogService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogService", function() { return BlogService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _core_helpers_route_helper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/helpers/route.helper */ "./src/app/core/helpers/route.helper.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BlogService = /** @class */ (function () {
+    function BlogService(http, httpHelper) {
+        this.http = http;
+        this.httpHelper = httpHelper;
+    }
+    BlogService.prototype.getAllBlogs = function () {
+        var url = this.httpHelper.buildUrl('Blog/GetAllBlogs');
+        return this.http.get(url);
+    };
+    BlogService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _core_helpers_route_helper__WEBPACK_IMPORTED_MODULE_2__["RouteHelper"]])
+    ], BlogService);
+    return BlogService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/helpers/route.helper.ts":
+/*!**********************************************!*\
+  !*** ./src/app/core/helpers/route.helper.ts ***!
+  \**********************************************/
+/*! exports provided: RouteHelper */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouteHelper", function() { return RouteHelper; });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var RouteHelper = /** @class */ (function () {
+    function RouteHelper(router) {
+        this.router = router;
+    }
+    RouteHelper.prototype.navigate = function (route) {
+        this.router.navigate(['/' + route]);
+    };
+    RouteHelper.prototype.getServerUrl = function () {
+        return src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].serverUrl;
+    };
+    RouteHelper.prototype.buildUrl = function (route) {
+        var validRoute = route;
+        if (route.substring(0, 1) === "/") {
+            validRoute = route.slice(1, route.length);
+        }
+        return "" + this.getServerUrl() + validRoute;
+    };
+    RouteHelper = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"]])
+    ], RouteHelper);
+    return RouteHelper;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/interceptors/http/http-error.interceptor.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/core/interceptors/http/http-error.interceptor.ts ***!
+  \******************************************************************/
+/*! exports provided: ErrorInterceptor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ErrorInterceptor", function() { return ErrorInterceptor; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ErrorInterceptor = /** @class */ (function () {
+    function ErrorInterceptor() {
+    }
+    ErrorInterceptor.prototype.intercept = function (request, next) {
+        return next.handle(request).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (event) { }, function (err) {
+            if (err instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpErrorResponse"]) {
+                // A client-side or network error occurred. Handle it accordingly.
+                console.error('An error occurred:', err.error.message);
+            }
+            else {
+                // The backend returned an unsuccessful response code.
+                // The response body may contain clues as to what went wrong,
+                console.error("Critical termination: " + err.error.status + ", " +
+                    ("body was: " + JSON.stringify(err.error.error)));
+            }
+            // return an observable with a user-facing error message
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+        }));
+    };
+    ErrorInterceptor = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [])
+    ], ErrorInterceptor);
+    return ErrorInterceptor;
 }());
 
 
@@ -585,7 +755,7 @@ module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"landing-content\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n    <div class=\"col-sm-8\">\r\n        <div class=\"header-one page-header\">Rod of God</div>\r\n        \r\n          <form>\r\n            <input [(ngModel)]=\"userProfile.address\" name = \"address\" type=\"text\" placeholder=\"Enter your Address\">\r\n            <button (click)=\"getMembersAround($event)\" class=\"submit\" type=\"submit\">Request Ride</button>\r\n          </form>\r\n\r\n          <div class=\"rog-text-error\" *ngIf=\"errorMessage\">\r\n            <div>{{errorMessage}}</div>\r\n          </div>\r\n\r\n          <div class=\"app-routes\">\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('about')\">about</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('live-sermon')\">live sermon</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('give')\">give</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('blog')\">blog</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('message-store')\">message store</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('music-store')\">music store</button>\r\n          </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<div class=\"landing-content\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n    <div class=\"col-sm-8\">\r\n        <div class=\"header-one page-header\">Rod of God</div>\r\n        \r\n          <form>\r\n            <input [(ngModel)]=\"userProfile.address\" name = \"address\" type=\"text\" placeholder=\"Enter your Address\">\r\n            <button (click)=\"getMembersAround($event)\" class=\"submit\" type=\"submit\">Request Ride</button>\r\n          </form>\r\n\r\n          <div class=\"rog-text-error\" *ngIf=\"errorMessage\">\r\n            <div>{{errorMessage}}</div>\r\n          </div>\r\n\r\n          <div class=\"app-routes\">\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('about')\">about</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('livesermon')\">live sermon</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('give')\">give</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('blog')\">blog</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('messagestore')\">message store</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('musicstore')\">music store</button>\r\n          </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -601,6 +771,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageComponent", function() { return HomePageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _homepage_models_user_profile_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homepage-models/user-profile.model */ "./src/app/home-page/homepage-models/user-profile.model.ts");
+/* harmony import */ var _core_helpers_route_helper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/helpers/route.helper */ "./src/app/core/helpers/route.helper.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -612,8 +783,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var HomePageComponent = /** @class */ (function () {
-    function HomePageComponent() {
+    function HomePageComponent(router) {
+        this.router = router;
         this.isFindDistanceClicked = false;
         this.userProfile = new _homepage_models_user_profile_model__WEBPACK_IMPORTED_MODULE_1__["UserProfile"];
     }
@@ -631,7 +804,7 @@ var HomePageComponent = /** @class */ (function () {
      * @param route
      */
     HomePageComponent.prototype.navigate = function (route) {
-        window.location.assign('/#/' + route);
+        this.router.navigate(route);
     };
     HomePageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -639,7 +812,7 @@ var HomePageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./homepage.component.html */ "./src/app/home-page/homepage.component.html"),
             styles: [__webpack_require__(/*! ./homepage.component.css */ "./src/app/home-page/homepage.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_core_helpers_route_helper__WEBPACK_IMPORTED_MODULE_2__["RouteHelper"]])
     ], HomePageComponent);
     return HomePageComponent;
 }());
@@ -1056,7 +1229,8 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    serverUrl: 'https://localhost:44390/api/'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
