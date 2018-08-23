@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { RouteHelper } from '../core/helpers/route.helper';
 import { IGetBlogsResponse } from './model/blog.model';
+import { NewBlog } from './model/new_blog.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,11 @@ export class BlogService {
   getAllBlogs() {
     let url = this.httpHelper.buildUrl('Blog/GetAllBlogs');
     return this.http.get<IGetBlogsResponse>(url);
+  }
+
+  createBlog(blog: NewBlog) {
+    let url = this.httpHelper.buildUrl('Blog/CreateBlog');
+    return this.http.post<NewBlog>(url,blog);
   }
   
 }

@@ -314,7 +314,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  blog works!\r\n</p>\r\n"
+module.exports = "<div class=\"container-fluid\">\r\n  <ul class=\"nav justify-content-end\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link active\" href=\"#\">Active</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">Link</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">Link</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\r\n    </li>\r\n  </ul>\r\n\r\n  <button (click)=\"createBlog()\">submit</button>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -330,6 +330,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogComponent", function() { return BlogComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _blog_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blog.service */ "./src/app/blog/blog.service.ts");
+/* harmony import */ var _model_new_blog_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./model/new_blog.model */ "./src/app/blog/model/new_blog.model.ts");
+/* harmony import */ var _constants_enums_blog_types_enum__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../constants/enums/blog-types.enum */ "./src/app/constants/enums/blog-types.enum.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -341,12 +343,25 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+
 var BlogComponent = /** @class */ (function () {
     function BlogComponent(blogService) {
         this.blogService = blogService;
+        this.newBlog = new _model_new_blog_model__WEBPACK_IMPORTED_MODULE_2__["NewBlog"]();
     }
     BlogComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.blogService.getAllBlogs().subscribe(function (response) {
+            _this.blog = response.blogs;
+            console.log(response);
+        });
+    };
+    BlogComponent.prototype.createBlog = function () {
+        this.newBlog.blogTypeId = _constants_enums_blog_types_enum__WEBPACK_IMPORTED_MODULE_3__["BlogTypes"].Testimony;
+        this.newBlog.blogPost = "This is initial blog";
+        this.newBlog.createDate = new Date();
+        this.blogService.createBlog(this.newBlog).subscribe(function (response) {
             console.log(response);
         });
     };
@@ -440,6 +455,10 @@ var BlogService = /** @class */ (function () {
         var url = this.httpHelper.buildUrl('Blog/GetAllBlogs');
         return this.http.get(url);
     };
+    BlogService.prototype.createBlog = function (blog) {
+        var url = this.httpHelper.buildUrl('Blog/CreateBlog');
+        return this.http.post(url, blog);
+    };
     BlogService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -449,6 +468,43 @@ var BlogService = /** @class */ (function () {
     return BlogService;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/blog/model/new_blog.model.ts":
+/*!**********************************************!*\
+  !*** ./src/app/blog/model/new_blog.model.ts ***!
+  \**********************************************/
+/*! exports provided: NewBlog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewBlog", function() { return NewBlog; });
+var NewBlog = /** @class */ (function () {
+    function NewBlog() {
+    }
+    return NewBlog;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/constants/enums/blog-types.enum.ts":
+/*!****************************************************!*\
+  !*** ./src/app/constants/enums/blog-types.enum.ts ***!
+  \****************************************************/
+/*! exports provided: BlogTypes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogTypes", function() { return BlogTypes; });
+var BlogTypes = {
+    Testimony: 1
+};
 
 
 /***/ }),
