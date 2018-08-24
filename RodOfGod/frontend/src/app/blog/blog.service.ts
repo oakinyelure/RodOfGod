@@ -17,6 +17,7 @@ export class BlogService {
   }
 
   createBlog(blog: NewBlog) {
+    
     let url = this.httpHelper.buildUrl('Blog/CreateBlog');
     return this.http.post<NewBlog>(url,blog);
   }

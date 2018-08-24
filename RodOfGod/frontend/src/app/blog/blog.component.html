@@ -1,19 +1,50 @@
-<div class="container-fluid">
-  <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Active</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#">Disabled</a>
-    </li>
-  </ul>
+<p-toast position="top-center" key="postNotification"></p-toast>
+<app-top-nav></app-top-nav>
 
-  <button (click)="createBlog()">submit</button>
+<div class="container">  
+
+  <div class="top-section">
+    <div class="page-title">
+      The ROG Feed
+    </div>
+
+    <div class="page-description">
+      The church's avenue for social interaction. Share your testimonies, moments and interact with the church community
+    </div>
+  </div>
+
+  <div class="blog-content">
+
+    <div class="summary-content">
+    </div>
+
+    <div class="post-content">
+
+      <div class="blog-panel">
+
+        <div class="panel-header">
+          <div class="content">
+            <div>Testimony</div>
+          </div>
+        </div>
+
+        <div class="panel-body">
+            <textarea rows="5" cols="30"  [(ngModel)]="newBlog.blogPost" pInputTextarea class="post-box" placeholder="What are you thankful for?"></textarea>
+        </div>
+
+        <div class="panel-footer">
+            <button pButton class="post-button" type="button" icon="pi pi-check" iconPos="right" label="Share" (click)="createBlog()" *ngIf="newBlog.blogPost"></button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="ad-content">
+    </div>
+
+  </div>
+
+
 
 </div>

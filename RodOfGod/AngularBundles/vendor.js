@@ -79104,6 +79104,653 @@ var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.2')
 
 /***/ }),
 
+/***/ "./node_modules/primeng/button.js":
+/*!****************************************!*\
+  !*** ./node_modules/primeng/button.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* Shorthand */
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(/*! ./components/button/button */ "./node_modules/primeng/components/button/button.js"));
+
+/***/ }),
+
+/***/ "./node_modules/primeng/components/button/button.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/primeng/components/button/button.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var domhandler_1 = __webpack_require__(/*! ../dom/domhandler */ "./node_modules/primeng/components/dom/domhandler.js");
+var common_1 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+var ButtonDirective = /** @class */ (function () {
+    function ButtonDirective(el, domHandler) {
+        this.el = el;
+        this.domHandler = domHandler;
+        this.iconPos = 'left';
+        this.cornerStyleClass = 'ui-corner-all';
+    }
+    ButtonDirective.prototype.ngAfterViewInit = function () {
+        this.domHandler.addMultipleClasses(this.el.nativeElement, this.getStyleClass());
+        if (this.icon) {
+            var iconElement = document.createElement("span");
+            iconElement.setAttribute("aria-hidden", "true");
+            var iconPosClass = (this.iconPos == 'right') ? 'ui-button-icon-right' : 'ui-button-icon-left';
+            iconElement.className = iconPosClass + ' ui-clickable ' + this.icon;
+            this.el.nativeElement.appendChild(iconElement);
+        }
+        var labelElement = document.createElement("span");
+        labelElement.className = 'ui-button-text ui-clickable';
+        labelElement.appendChild(document.createTextNode(this.label || 'ui-btn'));
+        this.el.nativeElement.appendChild(labelElement);
+        this.initialized = true;
+    };
+    ButtonDirective.prototype.getStyleClass = function () {
+        var styleClass = 'ui-button ui-widget ui-state-default ' + this.cornerStyleClass;
+        if (this.icon) {
+            if (this.label != null && this.label != undefined) {
+                if (this.iconPos == 'left')
+                    styleClass = styleClass + ' ui-button-text-icon-left';
+                else
+                    styleClass = styleClass + ' ui-button-text-icon-right';
+            }
+            else {
+                styleClass = styleClass + ' ui-button-icon-only';
+            }
+        }
+        else {
+            if (this.label) {
+                styleClass = styleClass + ' ui-button-text-only';
+            }
+            else {
+                styleClass = styleClass + ' ui-button-text-empty';
+            }
+        }
+        return styleClass;
+    };
+    Object.defineProperty(ButtonDirective.prototype, "label", {
+        get: function () {
+            return this._label;
+        },
+        set: function (val) {
+            this._label = val;
+            if (this.initialized) {
+                this.domHandler.findSingle(this.el.nativeElement, '.ui-button-text').textContent = this._label;
+                if (!this.icon) {
+                    if (this._label) {
+                        this.domHandler.removeClass(this.el.nativeElement, 'ui-button-text-empty');
+                        this.domHandler.addClass(this.el.nativeElement, 'ui-button-text-only');
+                    }
+                    else {
+                        this.domHandler.addClass(this.el.nativeElement, 'ui-button-text-empty');
+                        this.domHandler.removeClass(this.el.nativeElement, 'ui-button-text-only');
+                    }
+                }
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ButtonDirective.prototype, "icon", {
+        get: function () {
+            return this._icon;
+        },
+        set: function (val) {
+            this._icon = val;
+            if (this.initialized) {
+                var iconPosClass = (this.iconPos == 'right') ? 'ui-button-icon-right' : 'ui-button-icon-left';
+                this.domHandler.findSingle(this.el.nativeElement, '.ui-clickable').className =
+                    iconPosClass + ' ui-clickable ' + this.icon;
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ButtonDirective.prototype.ngOnDestroy = function () {
+        while (this.el.nativeElement.hasChildNodes()) {
+            this.el.nativeElement.removeChild(this.el.nativeElement.lastChild);
+        }
+        this.initialized = false;
+    };
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], ButtonDirective.prototype, "iconPos", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], ButtonDirective.prototype, "cornerStyleClass", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String),
+        __metadata("design:paramtypes", [String])
+    ], ButtonDirective.prototype, "label", null);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String),
+        __metadata("design:paramtypes", [String])
+    ], ButtonDirective.prototype, "icon", null);
+    ButtonDirective = __decorate([
+        core_1.Directive({
+            selector: '[pButton]',
+            providers: [domhandler_1.DomHandler]
+        }),
+        __metadata("design:paramtypes", [core_1.ElementRef, domhandler_1.DomHandler])
+    ], ButtonDirective);
+    return ButtonDirective;
+}());
+exports.ButtonDirective = ButtonDirective;
+var Button = /** @class */ (function () {
+    function Button() {
+        this.iconPos = 'left';
+        this.onClick = new core_1.EventEmitter();
+        this.onFocus = new core_1.EventEmitter();
+        this.onBlur = new core_1.EventEmitter();
+    }
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], Button.prototype, "type", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], Button.prototype, "iconPos", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], Button.prototype, "icon", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], Button.prototype, "label", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Boolean)
+    ], Button.prototype, "disabled", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], Button.prototype, "style", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], Button.prototype, "styleClass", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", core_1.EventEmitter)
+    ], Button.prototype, "onClick", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", core_1.EventEmitter)
+    ], Button.prototype, "onFocus", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", core_1.EventEmitter)
+    ], Button.prototype, "onBlur", void 0);
+    Button = __decorate([
+        core_1.Component({
+            selector: 'p-button',
+            template: "\n        <button [attr.type]=\"type\" [class]=\"styleClass\" [style]=\"style\" [disabled]=\"disabled\"\n            [ngClass]=\"{'ui-button ui-widget ui-state-default ui-corner-all':true,\n                        'ui-button-icon-only': (icon && !label),\n                        'ui-button-text-icon-left': (icon && label && iconPos === 'left'),\n                        'ui-button-text-icon-right': (icon && label && iconPos === 'right'),\n                        'ui-button-text-only': (!icon && label),\n                        'ui-button-text-empty': (!icon && !label),\n                        'ui-state-disabled': disabled}\"\n                        (click)=\"onClick.emit($event)\" (focus)=\"onFocus.emit($event)\" (blur)=\"onBlur.emit($event)\">\n            <ng-content></ng-content>\n            <span [ngClass]=\"{'ui-clickable': true,\n                        'ui-button-icon-left': (iconPos === 'left'), \n                        'ui-button-icon-right': (iconPos === 'right')}\"\n                        [class]=\"icon\" *ngIf=\"icon\"></span>\n            <span class=\"ui-button-text ui-clickable\">{{label||'ui-btn'}}</span>\n        </button>\n    "
+        })
+    ], Button);
+    return Button;
+}());
+exports.Button = Button;
+var ButtonModule = /** @class */ (function () {
+    function ButtonModule() {
+    }
+    ButtonModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule],
+            exports: [ButtonDirective, Button],
+            declarations: [ButtonDirective, Button]
+        })
+    ], ButtonModule);
+    return ButtonModule;
+}());
+exports.ButtonModule = ButtonModule;
+//# sourceMappingURL=button.js.map
+
+/***/ }),
+
+/***/ "./node_modules/primeng/components/dom/domhandler.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/primeng/components/dom/domhandler.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var DomHandler = /** @class */ (function () {
+    function DomHandler() {
+        this.calculatedScrollbarWidth = null;
+    }
+    DomHandler.prototype.addClass = function (element, className) {
+        if (element.classList)
+            element.classList.add(className);
+        else
+            element.className += ' ' + className;
+    };
+    DomHandler.prototype.addMultipleClasses = function (element, className) {
+        if (element.classList) {
+            var styles = className.split(' ');
+            for (var i = 0; i < styles.length; i++) {
+                element.classList.add(styles[i]);
+            }
+        }
+        else {
+            var styles = className.split(' ');
+            for (var i = 0; i < styles.length; i++) {
+                element.className += ' ' + styles[i];
+            }
+        }
+    };
+    DomHandler.prototype.removeClass = function (element, className) {
+        if (element.classList)
+            element.classList.remove(className);
+        else
+            element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    };
+    DomHandler.prototype.hasClass = function (element, className) {
+        if (element.classList)
+            return element.classList.contains(className);
+        else
+            return new RegExp('(^| )' + className + '( |$)', 'gi').test(element.className);
+    };
+    DomHandler.prototype.siblings = function (element) {
+        return Array.prototype.filter.call(element.parentNode.children, function (child) {
+            return child !== element;
+        });
+    };
+    DomHandler.prototype.find = function (element, selector) {
+        return Array.from(element.querySelectorAll(selector));
+    };
+    DomHandler.prototype.findSingle = function (element, selector) {
+        return element.querySelector(selector);
+    };
+    DomHandler.prototype.index = function (element) {
+        var children = element.parentNode.childNodes;
+        var num = 0;
+        for (var i = 0; i < children.length; i++) {
+            if (children[i] == element)
+                return num;
+            if (children[i].nodeType == 1)
+                num++;
+        }
+        return -1;
+    };
+    DomHandler.prototype.indexWithinGroup = function (element, attributeName) {
+        var children = element.parentNode.childNodes;
+        var num = 0;
+        for (var i = 0; i < children.length; i++) {
+            if (children[i] == element)
+                return num;
+            if (children[i].attributes && children[i].attributes[attributeName] && children[i].nodeType == 1)
+                num++;
+        }
+        return -1;
+    };
+    DomHandler.prototype.relativePosition = function (element, target) {
+        var elementDimensions = element.offsetParent ? { width: element.offsetWidth, height: element.offsetHeight } : this.getHiddenElementDimensions(element);
+        var targetHeight = target.offsetHeight;
+        var targetWidth = target.offsetWidth;
+        var targetOffset = target.getBoundingClientRect();
+        var windowScrollTop = this.getWindowScrollTop();
+        var viewport = this.getViewport();
+        var top, left;
+        if ((targetOffset.top + targetHeight + elementDimensions.height) > viewport.height) {
+            top = -1 * (elementDimensions.height);
+            if (targetOffset.top + top < 0) {
+                top = 0;
+            }
+        }
+        else {
+            top = targetHeight;
+        }
+        if ((targetOffset.left + elementDimensions.width) > viewport.width)
+            left = targetWidth - elementDimensions.width;
+        else
+            left = 0;
+        element.style.top = top + 'px';
+        element.style.left = left + 'px';
+    };
+    DomHandler.prototype.absolutePosition = function (element, target) {
+        var elementDimensions = element.offsetParent ? { width: element.offsetWidth, height: element.offsetHeight } : this.getHiddenElementDimensions(element);
+        var elementOuterHeight = elementDimensions.height;
+        var elementOuterWidth = elementDimensions.width;
+        var targetOuterHeight = target.offsetHeight;
+        var targetOuterWidth = target.offsetWidth;
+        var targetOffset = target.getBoundingClientRect();
+        var windowScrollTop = this.getWindowScrollTop();
+        var windowScrollLeft = this.getWindowScrollLeft();
+        var viewport = this.getViewport();
+        var top, left;
+        if (targetOffset.top + targetOuterHeight + elementOuterHeight > viewport.height) {
+            top = targetOffset.top + windowScrollTop - elementOuterHeight;
+            if (top < 0) {
+                top = 0 + windowScrollTop;
+            }
+        }
+        else {
+            top = targetOuterHeight + targetOffset.top + windowScrollTop;
+        }
+        if (targetOffset.left + targetOuterWidth + elementOuterWidth > viewport.width)
+            left = targetOffset.left + windowScrollLeft + targetOuterWidth - elementOuterWidth;
+        else
+            left = targetOffset.left + windowScrollLeft;
+        element.style.top = top + 'px';
+        element.style.left = left + 'px';
+    };
+    DomHandler.prototype.getHiddenElementOuterHeight = function (element) {
+        element.style.visibility = 'hidden';
+        element.style.display = 'block';
+        var elementHeight = element.offsetHeight;
+        element.style.display = 'none';
+        element.style.visibility = 'visible';
+        return elementHeight;
+    };
+    DomHandler.prototype.getHiddenElementOuterWidth = function (element) {
+        element.style.visibility = 'hidden';
+        element.style.display = 'block';
+        var elementWidth = element.offsetWidth;
+        element.style.display = 'none';
+        element.style.visibility = 'visible';
+        return elementWidth;
+    };
+    DomHandler.prototype.getHiddenElementDimensions = function (element) {
+        var dimensions = {};
+        element.style.visibility = 'hidden';
+        element.style.display = 'block';
+        dimensions.width = element.offsetWidth;
+        dimensions.height = element.offsetHeight;
+        element.style.display = 'none';
+        element.style.visibility = 'visible';
+        return dimensions;
+    };
+    DomHandler.prototype.scrollInView = function (container, item) {
+        var borderTopValue = getComputedStyle(container).getPropertyValue('borderTopWidth');
+        var borderTop = borderTopValue ? parseFloat(borderTopValue) : 0;
+        var paddingTopValue = getComputedStyle(container).getPropertyValue('paddingTop');
+        var paddingTop = paddingTopValue ? parseFloat(paddingTopValue) : 0;
+        var containerRect = container.getBoundingClientRect();
+        var itemRect = item.getBoundingClientRect();
+        var offset = (itemRect.top + document.body.scrollTop) - (containerRect.top + document.body.scrollTop) - borderTop - paddingTop;
+        var scroll = container.scrollTop;
+        var elementHeight = container.clientHeight;
+        var itemHeight = this.getOuterHeight(item);
+        if (offset < 0) {
+            container.scrollTop = scroll + offset;
+        }
+        else if ((offset + itemHeight) > elementHeight) {
+            container.scrollTop = scroll + offset - elementHeight + itemHeight;
+        }
+    };
+    DomHandler.prototype.fadeIn = function (element, duration) {
+        element.style.opacity = 0;
+        var last = +new Date();
+        var opacity = 0;
+        var tick = function () {
+            opacity = +element.style.opacity.replace(",", ".") + (new Date().getTime() - last) / duration;
+            element.style.opacity = opacity;
+            last = +new Date();
+            if (+opacity < 1) {
+                (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+            }
+        };
+        tick();
+    };
+    DomHandler.prototype.fadeOut = function (element, ms) {
+        var opacity = 1, interval = 50, duration = ms, gap = interval / duration;
+        var fading = setInterval(function () {
+            opacity = opacity - gap;
+            if (opacity <= 0) {
+                opacity = 0;
+                clearInterval(fading);
+            }
+            element.style.opacity = opacity;
+        }, interval);
+    };
+    DomHandler.prototype.getWindowScrollTop = function () {
+        var doc = document.documentElement;
+        return (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    };
+    DomHandler.prototype.getWindowScrollLeft = function () {
+        var doc = document.documentElement;
+        return (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
+    };
+    DomHandler.prototype.matches = function (element, selector) {
+        var p = Element.prototype;
+        var f = p['matches'] || p.webkitMatchesSelector || p['mozMatchesSelector'] || p.msMatchesSelector || function (s) {
+            return [].indexOf.call(document.querySelectorAll(s), this) !== -1;
+        };
+        return f.call(element, selector);
+    };
+    DomHandler.prototype.getOuterWidth = function (el, margin) {
+        var width = el.offsetWidth;
+        if (margin) {
+            var style = getComputedStyle(el);
+            width += parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+        }
+        return width;
+    };
+    DomHandler.prototype.getHorizontalPadding = function (el) {
+        var style = getComputedStyle(el);
+        return parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+    };
+    DomHandler.prototype.getHorizontalMargin = function (el) {
+        var style = getComputedStyle(el);
+        return parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+    };
+    DomHandler.prototype.innerWidth = function (el) {
+        var width = el.offsetWidth;
+        var style = getComputedStyle(el);
+        width += parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+        return width;
+    };
+    DomHandler.prototype.width = function (el) {
+        var width = el.offsetWidth;
+        var style = getComputedStyle(el);
+        width -= parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+        return width;
+    };
+    DomHandler.prototype.getInnerHeight = function (el) {
+        var height = el.offsetHeight;
+        var style = getComputedStyle(el);
+        height += parseFloat(style.paddingTop) + parseFloat(style.paddingBottom);
+        return height;
+    };
+    DomHandler.prototype.getOuterHeight = function (el, margin) {
+        var height = el.offsetHeight;
+        if (margin) {
+            var style = getComputedStyle(el);
+            height += parseFloat(style.marginTop) + parseFloat(style.marginBottom);
+        }
+        return height;
+    };
+    DomHandler.prototype.getHeight = function (el) {
+        var height = el.offsetHeight;
+        var style = getComputedStyle(el);
+        height -= parseFloat(style.paddingTop) + parseFloat(style.paddingBottom) + parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
+        return height;
+    };
+    DomHandler.prototype.getWidth = function (el) {
+        var width = el.offsetWidth;
+        var style = getComputedStyle(el);
+        width -= parseFloat(style.paddingLeft) + parseFloat(style.paddingRight) + parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth);
+        return width;
+    };
+    DomHandler.prototype.getViewport = function () {
+        var win = window, d = document, e = d.documentElement, g = d.getElementsByTagName('body')[0], w = win.innerWidth || e.clientWidth || g.clientWidth, h = win.innerHeight || e.clientHeight || g.clientHeight;
+        return { width: w, height: h };
+    };
+    DomHandler.prototype.getOffset = function (el) {
+        var rect = el.getBoundingClientRect();
+        return {
+            top: rect.top + document.body.scrollTop,
+            left: rect.left + document.body.scrollLeft
+        };
+    };
+    DomHandler.prototype.replaceElementWith = function (element, replacementElement) {
+        var parentNode = element.parentNode;
+        if (!parentNode)
+            throw "Can't replace element";
+        return parentNode.replaceChild(replacementElement, element);
+    };
+    DomHandler.prototype.getUserAgent = function () {
+        return navigator.userAgent;
+    };
+    DomHandler.prototype.isIE = function () {
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf('MSIE ');
+        if (msie > 0) {
+            // IE 10 or older => return version number
+            return true;
+        }
+        var trident = ua.indexOf('Trident/');
+        if (trident > 0) {
+            // IE 11 => return version number
+            var rv = ua.indexOf('rv:');
+            return true;
+        }
+        var edge = ua.indexOf('Edge/');
+        if (edge > 0) {
+            // Edge (IE 12+) => return version number
+            return true;
+        }
+        // other browser
+        return false;
+    };
+    DomHandler.prototype.appendChild = function (element, target) {
+        if (this.isElement(target))
+            target.appendChild(element);
+        else if (target.el && target.el.nativeElement)
+            target.el.nativeElement.appendChild(element);
+        else
+            throw 'Cannot append ' + target + ' to ' + element;
+    };
+    DomHandler.prototype.removeChild = function (element, target) {
+        if (this.isElement(target))
+            target.removeChild(element);
+        else if (target.el && target.el.nativeElement)
+            target.el.nativeElement.removeChild(element);
+        else
+            throw 'Cannot remove ' + element + ' from ' + target;
+    };
+    DomHandler.prototype.isElement = function (obj) {
+        return (typeof HTMLElement === "object" ? obj instanceof HTMLElement :
+            obj && typeof obj === "object" && obj !== null && obj.nodeType === 1 && typeof obj.nodeName === "string");
+    };
+    DomHandler.prototype.calculateScrollbarWidth = function () {
+        if (this.calculatedScrollbarWidth !== null)
+            return this.calculatedScrollbarWidth;
+        var scrollDiv = document.createElement("div");
+        scrollDiv.className = "ui-scrollbar-measure";
+        document.body.appendChild(scrollDiv);
+        var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+        document.body.removeChild(scrollDiv);
+        this.calculatedScrollbarWidth = scrollbarWidth;
+        return scrollbarWidth;
+    };
+    DomHandler.prototype.invokeElementMethod = function (element, methodName, args) {
+        element[methodName].apply(element, args);
+    };
+    DomHandler.prototype.clearSelection = function () {
+        if (window.getSelection) {
+            if (window.getSelection().empty) {
+                window.getSelection().empty();
+            }
+            else if (window.getSelection().removeAllRanges && window.getSelection().rangeCount > 0 && window.getSelection().getRangeAt(0).getClientRects().length > 0) {
+                window.getSelection().removeAllRanges();
+            }
+        }
+        else if (document['selection'] && document['selection'].empty) {
+            try {
+                document['selection'].empty();
+            }
+            catch (error) {
+                //ignore IE bug
+            }
+        }
+    };
+    DomHandler.prototype.getBrowser = function () {
+        if (!this.browser) {
+            var matched = this.resolveUserAgent();
+            this.browser = {};
+            if (matched.browser) {
+                this.browser[matched.browser] = true;
+                this.browser['version'] = matched.version;
+            }
+            if (this.browser['chrome']) {
+                this.browser['webkit'] = true;
+            }
+            else if (this.browser['webkit']) {
+                this.browser['safari'] = true;
+            }
+        }
+        return this.browser;
+    };
+    DomHandler.prototype.resolveUserAgent = function () {
+        var ua = navigator.userAgent.toLowerCase();
+        var match = /(chrome)[ \/]([\w.]+)/.exec(ua) ||
+            /(webkit)[ \/]([\w.]+)/.exec(ua) ||
+            /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(ua) ||
+            /(msie) ([\w.]+)/.exec(ua) ||
+            ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua) ||
+            [];
+        return {
+            browser: match[1] || "",
+            version: match[2] || "0"
+        };
+    };
+    DomHandler.prototype.isInteger = function (value) {
+        if (Number.isInteger) {
+            return Number.isInteger(value);
+        }
+        else {
+            return typeof value === "number" && isFinite(value) && Math.floor(value) === value;
+        }
+    };
+    DomHandler.zindex = 1000;
+    DomHandler = __decorate([
+        core_1.Injectable()
+    ], DomHandler);
+    return DomHandler;
+}());
+exports.DomHandler = DomHandler;
+//# sourceMappingURL=domhandler.js.map
+
+/***/ }),
+
 /***/ "./node_modules/rxjs/_esm5/index.js":
 /*!******************************************!*\
   !*** ./node_modules/rxjs/_esm5/index.js ***!

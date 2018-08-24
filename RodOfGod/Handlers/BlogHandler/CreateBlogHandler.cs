@@ -3,11 +3,8 @@ using MediatR;
 using RodOfGod.DataContexts;
 using RodOfGod.Exceptions.Blog;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace RodOfGod.Handlers.BlogHandler
 {

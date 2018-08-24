@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.page-title {
+    font-family: "Roboto Slab","Museo","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #5D6769;
+    line-height: 1.2em;
+    text-rendering: optimizelegibility;
+}
+
+.page-description {
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 10px;
+    letter-spacing: 2px;
+}
+
+.blog-content {
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+}
+
+.blog-panel {
+    border: 1px solid #EEEAEA;;
+}
+
+.blog-panel .panel-header .content{
+    display: inline flex;
+    background: #EEEAEA;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.blog-panel .panel-footer{
+    background: #EEEAEA;
+    padding: 5px;
+}
+
+.panel-footer .post-button {
+    width: fit-content;
+    cursor: pointer;
+    font-weight: 300;
+    background: #7DE8C6;
+    height: auto;
+    border: none;
+    outline: none;
+}
+
+.post-box { 
+    width: 100%;
+    height: 100%;
+    border: none !important;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+

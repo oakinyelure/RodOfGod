@@ -250,6 +250,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _core_interceptors_http_http_error_interceptor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./core/interceptors/http/http-error.interceptor */ "./src/app/core/interceptors/http/http-error.interceptor.ts");
+/* harmony import */ var _shared_shared_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./shared/shared.component */ "./src/app/shared/shared.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -264,13 +265,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+                _shared_shared_component__WEBPACK_IMPORTED_MODULE_8__["SharedComponent"],
             ],
             imports: [
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
@@ -303,7 +306,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".page-title {\r\n    font-family: \"Roboto Slab\",\"Museo\",\"Helvetica Neue\",Helvetica,Arial,sans-serif;\r\n    font-weight: bold;\r\n    font-size: 36px;\r\n    color: #5D6769;\r\n    line-height: 1.2em;\r\n    text-rendering: optimizelegibility;\r\n}\r\n\r\n.page-description {\r\n    font-size: 18px;\r\n    font-weight: 400;\r\n    padding-top: 10px;\r\n    letter-spacing: 2px;\r\n}\r\n\r\n.blog-content {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 30% auto 30%;\r\n        grid-template-columns: 30% auto 30%;\r\n}\r\n\r\n.blog-panel {\r\n    border: 1px solid #EEEAEA;;\r\n}\r\n\r\n.blog-panel .panel-header .content{\r\n    display: inline flex;\r\n    background: #EEEAEA;\r\n}\r\n\r\n.blog-panel .panel-footer{\r\n    background: #EEEAEA;\r\n    padding: 5px;\r\n}\r\n\r\n.panel-footer .post-button {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    cursor: pointer;\r\n    font-weight: 300;\r\n    background: #7DE8C6;\r\n    border-radius: 2em;\r\n    padding: 10px;\r\n    height: auto;\r\n}"
 
 /***/ }),
 
@@ -314,7 +317,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\r\n  <ul class=\"nav justify-content-end\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link active\" href=\"#\">Active</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">Link</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">Link</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\r\n    </li>\r\n  </ul>\r\n\r\n  <button (click)=\"createBlog()\">submit</button>\r\n\r\n</div>"
+module.exports = "<app-top-nav></app-top-nav>\r\n\r\n<div class=\"container\">\r\n\r\n  <div class=\"top-section\">\r\n    <div class=\"page-title\">\r\n      The ROG Feed\r\n    </div>\r\n\r\n    <div class=\"page-description\">\r\n      The church's avenue for social interaction. Share your testimonies, moments and interact with the church community\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"blog-content\">\r\n\r\n    <div class=\"summary-content\">\r\n    </div>\r\n\r\n    <div class=\"post-content\">\r\n\r\n      <div class=\"blog-panel\">\r\n\r\n        <div class=\"panel-header\">\r\n          <div class=\"content\">\r\n            <div>Testimony</div>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"panel-body\">\r\n\r\n        </div>\r\n\r\n        <div class=\"panel-footer\">\r\n            <button pButton class=\"post-button\" type=\"button\" icon=\"pi pi-check\" iconPos=\"right\" label=\"Send\"></button>\r\n        </div>\r\n\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"ad-content\">\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n\r\n</div>"
 
 /***/ }),
 
@@ -354,7 +357,6 @@ var BlogComponent = /** @class */ (function () {
         var _this = this;
         this.blogService.getAllBlogs().subscribe(function (response) {
             _this.blog = response.blogs;
-            console.log(response);
         });
     };
     BlogComponent.prototype.createBlog = function () {
@@ -393,6 +395,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _blog_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blog.component */ "./src/app/blog/blog.component.ts");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/button */ "./node_modules/primeng/button.js");
+/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(primeng_button__WEBPACK_IMPORTED_MODULE_4__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -402,13 +407,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var BlogModule = /** @class */ (function () {
     function BlogModule() {
     }
     BlogModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"],
+                primeng_button__WEBPACK_IMPORTED_MODULE_4__["ButtonModule"]
             ],
             declarations: [_blog_component__WEBPACK_IMPORTED_MODULE_2__["BlogComponent"]],
             exports: [_blog_component__WEBPACK_IMPORTED_MODULE_2__["BlogComponent"]]
@@ -1162,6 +1171,174 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/shared.component.css":
+/*!*********************************************!*\
+  !*** ./src/app/shared/shared.component.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/shared/shared.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/shared/shared.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  shared works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/shared/shared.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/shared/shared.component.ts ***!
+  \********************************************/
+/*! exports provided: SharedComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SharedComponent", function() { return SharedComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SharedComponent = /** @class */ (function () {
+    function SharedComponent() {
+    }
+    SharedComponent.prototype.ngOnInit = function () {
+    };
+    SharedComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-shared',
+            template: __webpack_require__(/*! ./shared.component.html */ "./src/app/shared/shared.component.html"),
+            styles: [__webpack_require__(/*! ./shared.component.css */ "./src/app/shared/shared.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SharedComponent);
+    return SharedComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/shared.module.ts":
+/*!*****************************************!*\
+  !*** ./src/app/shared/shared.module.ts ***!
+  \*****************************************/
+/*! exports provided: SharedModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SharedModule", function() { return SharedModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _top_nav_top_nav_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./top-nav/top-nav.component */ "./src/app/shared/top-nav/top-nav.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var SharedModule = /** @class */ (function () {
+    function SharedModule() {
+    }
+    SharedModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+            ],
+            declarations: [_top_nav_top_nav_component__WEBPACK_IMPORTED_MODULE_2__["TopNavComponent"]],
+            exports: [_top_nav_top_nav_component__WEBPACK_IMPORTED_MODULE_2__["TopNavComponent"]]
+        })
+    ], SharedModule);
+    return SharedModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/top-nav/top-nav.component.css":
+/*!******************************************************!*\
+  !*** ./src/app/shared/top-nav/top-nav.component.css ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/shared/top-nav/top-nav.component.html":
+/*!*******************************************************!*\
+  !*** ./src/app/shared/top-nav/top-nav.component.html ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"nav\">\n    <a class=\"nav-link active\" href=\"#\">Active</a>\n    <a class=\"nav-link\" href=\"#\">Link</a>\n    <a class=\"nav-link\" href=\"#\">Link</a>\n    <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\n  </nav>"
+
+/***/ }),
+
+/***/ "./src/app/shared/top-nav/top-nav.component.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/shared/top-nav/top-nav.component.ts ***!
+  \*****************************************************/
+/*! exports provided: TopNavComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopNavComponent", function() { return TopNavComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TopNavComponent = /** @class */ (function () {
+    function TopNavComponent() {
+        this.appTitle = 'ROG';
+    }
+    TopNavComponent.prototype.ngOnInit = function () {
+    };
+    TopNavComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-top-nav',
+            template: __webpack_require__(/*! ./top-nav.component.html */ "./src/app/shared/top-nav/top-nav.component.html"),
+            styles: [__webpack_require__(/*! ./top-nav.component.css */ "./src/app/shared/top-nav/top-nav.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TopNavComponent);
+    return TopNavComponent;
+}());
 
 
 
