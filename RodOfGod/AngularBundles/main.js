@@ -310,7 +310,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".about-page{\r\n    background: black;\r\nbackground-size: cover;\r\ncolor: #fff;\r\ntext-align: center;\r\ntext-rendering: optimizeLegibility;\r\npadding: 15px 10px 15px;\r\nheight:100vh;\r\nwidth: 100%;\r\nposition: relative;\r\n}\r\n\r\n.head_container{\r\nposition: absolute;\r\nright: 0;\r\n}\r\n\r\n.home-button{\r\n    position: absolute;\r\n    left: 20px;\r\n    color: white;\r\n    font-family: helvetica;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    background-color: #ff4081;\r\n    width:-webkit-fit-content;\r\n    width:-moz-fit-content;\r\n    width:fit-content;\r\n    border-radius: 10px;\r\n\r\n}\r\n\r\n.btn, a{\r\n    color: #ff4081;\r\n    font-family: helvetica;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n   \r\n}\r\n\r\na:hover{\r\ncolor:white;\r\n}\r\n\r\na:active {\r\n    color: black;\r\n  }\r\n\r\n.page-body{\r\n      vertical-align: middle;\r\n      margin-top: 20em;\r\n      background-color: rgba(169, 169, 169, 0.212);\r\n  }"
 
 /***/ }),
 
@@ -321,7 +321,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  about works!\r\n</p>\r\n"
+module.exports = "<div class=\"about-page\">\r\n\r\n    <div class=\"page-header\">\r\n        <button class=\"home-button\" type=\"button\">ROG</button>\r\n            <div class=\"head_container\">\r\n                <a href=\"#\" class=\"btn\">about</a>\r\n                <a href=\"#\" class=\"btn\">live sermon</a>\r\n                <a href=\"#\" class=\"btn\">give</a>\r\n                <a href=\"#\" class=\"btn\">blog</a>\r\n                <a href=\"#\" class=\"btn\">message store</a>\r\n                <a href=\"#\" class=\"btn\">music store</a>\r\n            </div>    \r\n    </div>\r\n\r\n    <div class=\"body-container\">\r\n     <div class=\"page-body\">\r\n        <div class=\"body-content\">\r\n            <li class=\"btn\" > <a href=\"#\">Vision</a></li>\r\n            <li class=\"btn\" > <a href=\"#\">Leadership</a></li>\r\n        </div>\r\n     </div>\r\n\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -379,6 +379,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _about_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about.component */ "./src/app/about/about.component.ts");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/esm5/button.es5.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -388,16 +390,21 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var AboutModule = /** @class */ (function () {
     function AboutModule() {
     }
     AboutModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _angular_material_button__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"]
             ],
             declarations: [_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"]],
-            exports: [_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"]]
+            exports: [_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"]],
+            bootstrap: [_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"]]
         })
     ], AboutModule);
     return AboutModule;
@@ -586,7 +593,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".emotion-section {\r\n    border-top: 2px solid #89BDD1;\r\n    padding: 12px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.emotion-button {\r\n    cursor: pointer;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    padding: 5px;\r\n    border-radius: 2em;\r\n    margin-right: 5px;\r\n}\r\n\r\n.emotion-button:hover {\r\n    background: #89BDD1;\r\n}\r\n\r\n.emotion-bar {\r\n    display: inline-flex;\r\n}"
+module.exports = ".emotion-section {\r\n    border-top: 2px solid #89BDD1;\r\n    padding: 12px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.emotion-button {\r\n    cursor: pointer;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    padding: 5px;\r\n    border-radius: 2em;\r\n    margin-right: 5px;\r\n}\r\n\r\n.emotion-button:hover {\r\n    background: #89BDD1;\r\n}\r\n\r\n.emotion-bar {\r\n    display: inline-flex;\r\n}\r\n\r\n.blog-comment-section {\r\n    border-top: 2px solid #89BDD1;\r\n    padding: 8px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.comment-field {\r\n    width: 100%;\r\n    text-transform: none;\r\n    text-align: left;\r\n}"
 
 /***/ }),
 
@@ -597,7 +604,7 @@ module.exports = ".emotion-section {\r\n    border-top: 2px solid #89BDD1;\r\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"emotion-section\">\n\n  <div class=\"emotion-bar\">\n    <div *ngIf=\"!liked\" class=\"like-button emotion-button\"><i class=\"pi pi-check\" style=\"align-content: center\"></i>Like</div>\n    <div *ngIf=\"liked\" class=\"like-button emotion-button\"><i class=\"pi pi-check\" style=\"align-content: center\"></i>Unlike</div>\n    <div class=\"like-button emotion-button\" (click)=\"createBlogComment()\"><i class=\"pi pi-external-link\" style=\"align-content: center\"></i>Comment</div>\n  </div>\n\n</div>"
+module.exports = "\r\n<div class=\"emotion-section\">\r\n\r\n  <div class=\"emotion-bar\">\r\n    <div *ngIf=\"!liked\" class=\"like-button emotion-button\"><i class=\"pi pi-check\" style=\"align-content: center\"></i>Like</div>\r\n    <div *ngIf=\"liked\" class=\"like-button emotion-button\"><i class=\"pi pi-check\" style=\"align-content: center\"></i>Unlike</div>\r\n    <div class=\"like-button emotion-button\" (click)=\"createBlogComment()\"><i class=\"pi pi-external-link\" style=\"align-content: center\"></i>Comment</div>\r\n  </div>\r\n\r\n</div>\r\n\r\n<div class=\"blog-comment-section\" *ngIf=\"openCommentBox\">\r\n    <textarea [rows]=\"1\" [cols]=\"100\" class=\"comment-field\" pInputTextarea autoResize=\"autoResize\" placeholder=\"Write a comment\"></textarea>\r\n</div>"
 
 /***/ }),
 
@@ -1639,7 +1646,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  shared works!\n</p>\n"
+module.exports = "<p>\r\n  shared works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -1743,7 +1750,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"nav\">\n    <a class=\"nav-link active\" href=\"#\">Active</a>\n    <a class=\"nav-link\" href=\"#\">Link</a>\n    <a class=\"nav-link\" href=\"#\">Link</a>\n    <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\n  </nav>"
+module.exports = "<nav class=\"nav\">\r\n    <a class=\"nav-link active\" href=\"#\">Active</a>\r\n    <a class=\"nav-link\" href=\"#\">Link</a>\r\n    <a class=\"nav-link\" href=\"#\">Link</a>\r\n    <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\r\n  </nav>"
 
 /***/ }),
 
@@ -1954,7 +1961,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\oakin\Documents\public_dev\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\kunle\source\repos\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })
