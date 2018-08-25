@@ -27,7 +27,7 @@ namespace RodOfGod.Handlers.BlogHandler
                 {
                     BlogPost = request.BlogPost,
                     BlogTypeID = request.BlogTypeId,
-                    CreateDate = request.CreateDate
+                    CreateDate = DateTime.Now
                 });
 
                 try

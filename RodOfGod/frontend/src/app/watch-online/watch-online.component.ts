@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-watch-online',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./watch-online.component.css']
 })
 export class WatchOnlineComponent implements OnInit {
-
+  @Input()page: string = "livesermon";
   constructor() { }
 
   ngOnInit() {

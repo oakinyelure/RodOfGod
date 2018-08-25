@@ -16,6 +16,7 @@ export class BlogComponent implements OnInit {
 
   blogs: Blog[];
   newBlog = new NewBlog();
+  page:string = "blog";
 
   constructor(private blogService: BlogService,private notification: MessageService, private dateHelper: DateHelper) { }
 
@@ -36,7 +37,6 @@ export class BlogComponent implements OnInit {
 
     if(this.newBlog.blogPost.trim()) {
       this.blogService.createBlog(this.newBlog).subscribe(response => {
-        console.log(response);
         this.notification.add({key: 'postNotification', severity:'success', summary:'Testimony shared', detail:'Your testimony have been shared'});
         this.blogs.unshift({blogId: response.blogId, blogPost: response.blogPost, createDate: response.createDate, blogTypeId: response.blogTypeId});
         this.newBlog.blogPost = null;

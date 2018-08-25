@@ -1,0 +1,27 @@
+.app-navigation {
+    background: #4D1818;
+    padding: 10px;
+}
+
+.nav-wrapper {
+    margin-bottom: 90px;
+}
+
+.app-navigation .nav-link {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: .4rem;
+    cursor: pointer;
+}
+
+.app-navigation .nav-link:hover {
+    background: #fff;
+    color: #000;
+}
+
+.app-navigation .active {
+    background: #fff;
+    color: #000;
+    outline-color: #4D1818;
+    border: 2px solid #4D1818;
+}

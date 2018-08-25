@@ -667,7 +667,7 @@ var BlogLikeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Lato');\r\n\r\n::ng-deep body {\r\n    background: #FAFCFD;\r\n}\r\n\r\n.page-title {\r\n    font-family: \"Roboto Slab\",\"Museo\",\"Helvetica Neue\",Helvetica,Arial,sans-serif;\r\n    font-weight: bold;\r\n    font-size: 36px;\r\n    color: #5D6769;\r\n    line-height: 1.2em;\r\n    text-rendering: optimizelegibility;\r\n}\r\n\r\n.page-description {\r\n    font-size: 18px;\r\n    font-weight: 400;\r\n    padding-top: 10px;\r\n    letter-spacing: 2px;\r\n}\r\n\r\n.blog-content {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 20% auto 20%;\r\n        grid-template-columns: 20% auto 20%;\r\n}\r\n\r\n.blog-panel {\r\n    border: 1px solid #EEEAEA;;\r\n}\r\n\r\n.blog-panel .panel-header .content{\r\n    display: inline flex;\r\n    background: #EEEAEA;\r\n    font-weight: 500;\r\n    padding: 5px;\r\n}\r\n\r\n.blog-panel .panel-footer{\r\n    background: #EEEAEA;\r\n    padding: 5px;\r\n}\r\n\r\n.panel-footer .post-button {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    cursor: pointer;\r\n    font-weight: 300;\r\n    background: #7DE8C6;\r\n    height: auto;\r\n    border: none;\r\n    outline: none;\r\n}\r\n\r\n.post-box { \r\n    width: 100%;\r\n    height: 100%;\r\n    border: none !important;\r\n    outline: none;\r\n    font-family: 'Lato', sans-serif;\r\n    font-weight: 500;\r\n    font-size: 18px;\r\n}\r\n\r\n.user-post {\r\n    margin-top: 25px;\r\n}\r\n\r\n.user-post-panel {\r\n    margin-top: 15px;\r\n    border: 2px solid #EEEAEA;\r\n    background: #fff;\r\n    box-shadow: 0px 1px 25px -12px rgba(0,0,0,0.75);\r\n}\r\n\r\n.user-post-panel .panel-header {\r\n    background: #EEEAEA;\r\n    padding: 5px;\r\n    font-size: 16;\r\n    font-weight: 600;\r\n    box-shadow: inset 0px 1px 35px -10px rgba(92,90,92,1);\r\n}\r\n\r\n.user-post-panel .post-body {\r\n    padding: 10px;\r\n}\r\n\r\n\r\n"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Lato');\r\n\r\n::ng-deep body {\r\n    background: #FAFCFD;\r\n}\r\n\r\n.page-title {\r\n    font-family: \"Roboto Slab\",\"Museo\",\"Helvetica Neue\",Helvetica,Arial,sans-serif;\r\n    font-weight: bold;\r\n    font-size: 36px;\r\n    color: #5D6769;\r\n    line-height: 1.2em;\r\n    text-rendering: optimizelegibility;\r\n}\r\n\r\n.page-description {\r\n    font-size: 18px;\r\n    font-weight: 400;\r\n    padding-top: 10px;\r\n    letter-spacing: 2px;\r\n}\r\n\r\n.blog-content {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 20% auto 20%;\r\n        grid-template-columns: 20% auto 20%;\r\n}\r\n\r\n.blog-panel {\r\n    border: 1px solid #EEEAEA;;\r\n}\r\n\r\n.blog-panel .panel-header .content{\r\n    display: inline flex;\r\n    background: #EEEAEA;\r\n    font-weight: 500;\r\n    padding: 5px;\r\n}\r\n\r\n.blog-panel .panel-footer{\r\n    background: #EEEAEA;\r\n    padding: 5px;\r\n}\r\n\r\n.panel-footer .post-button {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    cursor: pointer;\r\n    font-weight: 300;\r\n    background: #4D1818;\r\n    height: auto;\r\n    border: none;\r\n    outline: none;\r\n}\r\n\r\n.post-box { \r\n    width: 100%;\r\n    height: 100%;\r\n    border: none !important;\r\n    outline: none;\r\n    font-family: 'Lato', sans-serif;\r\n    font-weight: 500;\r\n    font-size: 18px;\r\n}\r\n\r\n.user-post {\r\n    margin-top: 25px;\r\n}\r\n\r\n.user-post-panel {\r\n    margin-top: 15px;\r\n    border: 2px solid #EEEAEA;\r\n    background: #fff;\r\n    box-shadow: 0px 1px 25px -12px rgba(0,0,0,0.75);\r\n}\r\n\r\n.user-post-panel .panel-header {\r\n    background: #EEEAEA;\r\n    padding: 5px;\r\n    font-size: 16;\r\n    font-weight: 600;\r\n    box-shadow: inset 0px 1px 35px -10px rgba(92,90,92,1);\r\n}\r\n\r\n.user-post-panel .post-body {\r\n    padding: 10px;\r\n}\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -678,7 +678,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Lato');\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p-toast position=\"top-center\" key=\"postNotification\"></p-toast>\r\n<app-top-nav></app-top-nav>\r\n\r\n<div class=\"container-fluid\">  \r\n\r\n  <div class=\"top-section\">\r\n    <div class=\"page-title\">\r\n      The ROG Feed\r\n    </div>\r\n\r\n    <div class=\"page-description\">\r\n      The church's avenue for social interaction. Share your testimonies, moments and interact with the church community\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"blog-content\">\r\n\r\n    <div class=\"summary-content\">\r\n    </div>\r\n\r\n    <div class=\"post-content\">\r\n\r\n      <div class=\"blog-panel\">\r\n        <div class=\"panel-header\">\r\n          <div class=\"content\">\r\n            <div>Testimony</div>\r\n          </div>\r\n        </div>\r\n        <div class=\"panel-body\">\r\n            <textarea rows=\"5\" cols=\"30\"  [(ngModel)]=\"newBlog.blogPost\" pInputTextarea class=\"post-box\" placeholder=\"What are you thankful for?\"></textarea>\r\n        </div>\r\n        <div class=\"panel-footer\">\r\n            <button pButton class=\"post-button\" type=\"button\" icon=\"pi pi-pencil\" iconPos=\"right\" label=\"Share\" (click)=\"createBlog()\" *ngIf=\"newBlog.blogPost\"></button>\r\n        </div>\r\n      </div>\r\n\r\n\r\n      <div class=\"user-post\" *ngIf=\"blogs\">\r\n          <div class=\"user-post-panel\" *ngFor=\"let blog of blogs\">\r\n            <div class=\"panel-header\">\r\n              <div class=\"content\">\r\n                <div>Posted {{dateHelper.fromNow(blog.createDate)}}</div>\r\n              </div>\r\n            </div>\r\n            <div class=\"post-body\">\r\n                {{blog.blogPost}}\r\n                <div class=\"emotion-bar\">\r\n                  <app-blog-like [selectedBlog]=\"blog\"></app-blog-like>\r\n                </div>\r\n            </div>\r\n\r\n\r\n          </div>\r\n        </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"ad-content\">\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n\r\n</div>"
+module.exports = "<p-toast position=\"top-center\" key=\"postNotification\"></p-toast>\r\n<app-top-nav [page]=\"page\"></app-top-nav>\r\n\r\n<div class=\"container-fluid\">  \r\n\r\n  <div class=\"top-section\">\r\n    <div class=\"page-title\">\r\n      The ROG Feed\r\n    </div>\r\n\r\n    <div class=\"page-description\">\r\n      The church's avenue for social interaction. Share your testimonies, moments and interact with the church community\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"blog-content\">\r\n\r\n    <div class=\"summary-content\">\r\n    </div>\r\n\r\n    <div class=\"post-content\">\r\n\r\n      <div class=\"blog-panel\">\r\n        <div class=\"panel-header\">\r\n          <div class=\"content\">\r\n            <div>Testimony</div>\r\n          </div>\r\n        </div>\r\n        <div class=\"panel-body\">\r\n            <textarea rows=\"5\" cols=\"30\"  [(ngModel)]=\"newBlog.blogPost\" pInputTextarea class=\"post-box\" placeholder=\"What are you thankful for?\"></textarea>\r\n        </div>\r\n        <div class=\"panel-footer\">\r\n            <button pButton class=\"post-button\" type=\"button\" icon=\"pi pi-pencil\" iconPos=\"right\" label=\"Share\" (click)=\"createBlog()\" *ngIf=\"newBlog.blogPost\"></button>\r\n        </div>\r\n      </div>\r\n\r\n\r\n      <div class=\"user-post\" *ngIf=\"blogs\">\r\n          <div class=\"user-post-panel\" *ngFor=\"let blog of blogs\">\r\n            <div class=\"panel-header\">\r\n              <div class=\"content\">\r\n                <div>Posted {{dateHelper.fromNow(blog.createDate)}} - {{blog.createDate}}</div>\r\n              </div>\r\n            </div>\r\n            <div class=\"post-body\">\r\n                {{blog.blogPost}}\r\n                <div class=\"emotion-bar\">\r\n                  <app-blog-like [selectedBlog]=\"blog\"></app-blog-like>\r\n                </div>\r\n            </div>\r\n\r\n\r\n          </div>\r\n        </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"ad-content\">\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n\r\n</div>"
 
 /***/ }),
 
@@ -720,6 +720,7 @@ var BlogComponent = /** @class */ (function () {
         this.notification = notification;
         this.dateHelper = dateHelper;
         this.newBlog = new _model_new_blog_model__WEBPACK_IMPORTED_MODULE_2__["NewBlog"]();
+        this.page = "blog";
     }
     BlogComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -735,7 +736,6 @@ var BlogComponent = /** @class */ (function () {
         this.newBlog.createDate = new Date();
         if (this.newBlog.blogPost.trim()) {
             this.blogService.createBlog(this.newBlog).subscribe(function (response) {
-                console.log(response);
                 _this.notification.add({ key: 'postNotification', severity: 'success', summary: 'Testimony shared', detail: 'Your testimony have been shared' });
                 _this.blogs.unshift({ blogId: response.blogId, blogPost: response.blogPost, createDate: response.createDate, blogTypeId: response.blogTypeId });
                 _this.newBlog.blogPost = null;
@@ -1100,7 +1100,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  give works!\r\n</p>\r\n"
+module.exports = "<app-top-nav [page]=\"page\"></app-top-nav>"
 
 /***/ }),
 
@@ -1127,9 +1127,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var GiveComponent = /** @class */ (function () {
     function GiveComponent() {
+        this.page = "give";
     }
     GiveComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], GiveComponent.prototype, "page", void 0);
     GiveComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-give',
@@ -1158,6 +1163,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _give_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./give.component */ "./src/app/give/give.component.ts");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1167,13 +1173,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var GiveModule = /** @class */ (function () {
     function GiveModule() {
     }
     GiveModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"]
             ],
             declarations: [_give_component__WEBPACK_IMPORTED_MODULE_2__["GiveComponent"]],
             exports: [_give_component__WEBPACK_IMPORTED_MODULE_2__["GiveComponent"]]
@@ -1356,7 +1364,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  message-store works!\r\n</p>\r\n"
+module.exports = "<app-top-nav [page]=\"page\"></app-top-nav>"
 
 /***/ }),
 
@@ -1383,9 +1391,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var MessageStoreComponent = /** @class */ (function () {
     function MessageStoreComponent() {
+        this.page = "shop";
     }
     MessageStoreComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], MessageStoreComponent.prototype, "page", void 0);
     MessageStoreComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-message-store',
@@ -1414,6 +1427,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _message_store_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./message-store.component */ "./src/app/message-store/message-store.component.ts");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1423,13 +1437,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var MessageStoreModule = /** @class */ (function () {
     function MessageStoreModule() {
     }
     MessageStoreModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"]
             ],
             declarations: [_message_store_component__WEBPACK_IMPORTED_MODULE_2__["MessageStoreComponent"]],
             exports: [_message_store_component__WEBPACK_IMPORTED_MODULE_2__["MessageStoreComponent"]]
@@ -1739,7 +1755,7 @@ var SharedModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".app-navigation {\r\n    background: #4D1818;\r\n    padding: 10px;\r\n}\r\n\r\n.nav-wrapper {\r\n    margin-bottom: 90px;\r\n}\r\n\r\n.app-navigation .nav-link {\r\n    color: #fff;\r\n    font-size: 20px;\r\n    letter-spacing: .4rem;\r\n    cursor: pointer;\r\n}\r\n\r\n.app-navigation .nav-link:hover {\r\n    background: #fff;\r\n    color: #000;\r\n}\r\n\r\n.app-navigation .active {\r\n    background: #fff;\r\n    color: #000;\r\n    outline-color: #4D1818;\r\n    border: 2px solid #4D1818;\r\n}"
 
 /***/ }),
 
@@ -1750,8 +1766,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"nav\">\r\n    <a class=\"nav-link active\" href=\"#\">Active</a>\r\n    <a class=\"nav-link\" href=\"#\">Link</a>\r\n    <a class=\"nav-link\" href=\"#\">Link</a>\r\n    <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\r\n  </nav>"
-
+module.exports = "<div class=\"nav-wrapper\">\r\n\r\n  <nav class=\"nav fixed-top app-navigation\">\r\n      <div class=\"nav-link {{(page === 'home' ? 'active' : '')}}\" href=\"#\" (click)=\"navigate('home')\">Home</div>\r\n      <div class=\"nav-link {{(page === 'about' ? 'active' : '')}}\" href=\"#\"  (click)=\"navigate('about')\">About</div>\r\n      <div class=\"nav-link {{(page === 'livesermon' ? 'active' : '')}}\" href=\"#\"  (click)=\"navigate('livesermon')\">Live Service</div>\r\n      <div class=\"nav-link {{(page === 'give' ? 'active' : '')}}\" href=\"#\"  (click)=\"navigate('give')\">Give</div>\r\n      <div class=\"nav-link {{(page === 'blog' ? 'active' : '')}}\" href=\"#\"  (click)=\"navigate('blog')\">Rog Feed</div>\r\n      <div class=\"nav-link {{(page === 'shop' ? 'active' : '')}}\" href=\"#\"  (click)=\"navigate('messagestore')\">Shop</div>\r\n    </nav>\r\n  \r\n  </div>"
 /***/ }),
 
 /***/ "./src/app/shared/top-nav/top-nav.component.ts":
@@ -1765,6 +1780,7 @@ module.exports = "<nav class=\"nav\">\r\n    <a class=\"nav-link active\" href=\
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopNavComponent", function() { return TopNavComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core_helpers_route_helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/helpers/route.helper */ "./src/app/core/helpers/route.helper.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1775,19 +1791,28 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var TopNavComponent = /** @class */ (function () {
-    function TopNavComponent() {
+    function TopNavComponent(router) {
+        this.router = router;
         this.appTitle = 'ROG';
     }
     TopNavComponent.prototype.ngOnInit = function () {
     };
+    TopNavComponent.prototype.navigate = function (toPage) {
+        this.router.navigate(toPage);
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], TopNavComponent.prototype, "page", void 0);
     TopNavComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-top-nav',
             template: __webpack_require__(/*! ./top-nav.component.html */ "./src/app/shared/top-nav/top-nav.component.html"),
             styles: [__webpack_require__(/*! ./top-nav.component.css */ "./src/app/shared/top-nav/top-nav.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_core_helpers_route_helper__WEBPACK_IMPORTED_MODULE_1__["RouteHelper"]])
     ], TopNavComponent);
     return TopNavComponent;
 }());
@@ -1814,7 +1839,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  watch-online works!\r\n</p>\r\n"
+module.exports = "<app-top-nav [page]=\"page\"></app-top-nav>"
 
 /***/ }),
 
@@ -1841,9 +1866,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var WatchOnlineComponent = /** @class */ (function () {
     function WatchOnlineComponent() {
+        this.page = "livesermon";
     }
     WatchOnlineComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], WatchOnlineComponent.prototype, "page", void 0);
     WatchOnlineComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-watch-online',
@@ -1872,6 +1902,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _watch_online_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./watch-online.component */ "./src/app/watch-online/watch-online.component.ts");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1881,13 +1912,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var WatchOnlineModule = /** @class */ (function () {
     function WatchOnlineModule() {
     }
     WatchOnlineModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"]
             ],
             declarations: [_watch_online_component__WEBPACK_IMPORTED_MODULE_2__["WatchOnlineComponent"]],
             exports: [_watch_online_component__WEBPACK_IMPORTED_MODULE_2__["WatchOnlineComponent"]]
