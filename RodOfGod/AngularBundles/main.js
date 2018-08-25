@@ -586,7 +586,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".emotion-section {\r\n    border-top: 2px solid #89BDD1;\r\n    padding: 12px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.emotion-button {\r\n    cursor: pointer;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    padding: 5px;\r\n    border-radius: 2em;\r\n    margin-right: 5px;\r\n}\r\n\r\n.emotion-button:hover {\r\n    background: #89BDD1;\r\n}\r\n\r\n.emotion-bar {\r\n    display: inline-flex;\r\n}"
+module.exports = ".emotion-section {\r\n    border-top: 2px solid #89BDD1;\r\n    padding: 12px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.emotion-button {\r\n    cursor: pointer;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    padding: 5px;\r\n    border-radius: 2em;\r\n    margin-right: 5px;\r\n}\r\n\r\n.emotion-button:hover {\r\n    background: #89BDD1;\r\n}\r\n\r\n.emotion-bar {\r\n    display: inline-flex;\r\n}\r\n\r\n.blog-comment-section {\r\n    border-top: 2px solid #89BDD1;\r\n    padding: 8px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.comment-field {\r\n    width: 100%;\r\n    text-transform: none;\r\n    text-align: left;\r\n}"
 
 /***/ }),
 
@@ -597,7 +597,7 @@ module.exports = ".emotion-section {\r\n    border-top: 2px solid #89BDD1;\r\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"emotion-section\">\n\n  <div class=\"emotion-bar\">\n    <div *ngIf=\"!liked\" class=\"like-button emotion-button\"><i class=\"pi pi-check\" style=\"align-content: center\"></i>Like</div>\n    <div *ngIf=\"liked\" class=\"like-button emotion-button\"><i class=\"pi pi-check\" style=\"align-content: center\"></i>Unlike</div>\n    <div class=\"like-button emotion-button\" (click)=\"createBlogComment()\"><i class=\"pi pi-external-link\" style=\"align-content: center\"></i>Comment</div>\n  </div>\n\n</div>"
+module.exports = "\r\n<div class=\"emotion-section\">\r\n\r\n  <div class=\"emotion-bar\">\r\n    <div *ngIf=\"!liked\" class=\"like-button emotion-button\"><i class=\"pi pi-check\" style=\"align-content: center\"></i>Like</div>\r\n    <div *ngIf=\"liked\" class=\"like-button emotion-button\"><i class=\"pi pi-check\" style=\"align-content: center\"></i>Unlike</div>\r\n    <div class=\"like-button emotion-button\" (click)=\"createBlogComment()\"><i class=\"pi pi-external-link\" style=\"align-content: center\"></i>Comment</div>\r\n  </div>\r\n\r\n</div>\r\n\r\n<div class=\"blog-comment-section\" *ngIf=\"openCommentBox\">\r\n    <textarea [rows]=\"1\" [cols]=\"100\" class=\"comment-field\" pInputTextarea autoResize=\"autoResize\" placeholder=\"Write a comment\"></textarea>\r\n</div>"
 
 /***/ }),
 
@@ -1639,7 +1639,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  shared works!\n</p>\n"
+module.exports = "<p>\r\n  shared works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -1743,7 +1743,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"nav\">\n    <a class=\"nav-link active\" href=\"#\">Active</a>\n    <a class=\"nav-link\" href=\"#\">Link</a>\n    <a class=\"nav-link\" href=\"#\">Link</a>\n    <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\n  </nav>"
+module.exports = "<nav class=\"nav\">\r\n    <a class=\"nav-link active\" href=\"#\">Active</a>\r\n    <a class=\"nav-link\" href=\"#\">Link</a>\r\n    <a class=\"nav-link\" href=\"#\">Link</a>\r\n    <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\r\n  </nav>"
 
 /***/ }),
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { RouteHelper } from '../../core/helpers/route.helper';
 
 @Component({
   selector: 'app-top-nav',
@@ -7,11 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: RouteHelper) { }
 
-  appTitle:string = 'ROG'
+  appTitle:string = 'ROG';
+  @Input()page: string;
+
 
   ngOnInit() {
+    
+  }
+
+  navigate(toPage: string) {
+    this.router.navigate(toPage);
   }
 
 }
