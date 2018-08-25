@@ -1,24 +1,18 @@
 <div class="about-page">
+    <div class="page-breadcrumb">
+        <app-top-nav></app-top-nav>
 
-    <div class="page-header">
-        <button class="home-button" type="button">ROG</button>
-            <div class="head_container">
-                <a href="#" class="btn">about</a>
-                <a href="#" class="btn">live sermon</a>
-                <a href="#" class="btn">give</a>
-                <a href="#" class="btn">blog</a>
-                <a href="#" class="btn">message store</a>
-                <a href="#" class="btn">music store</a>
-            </div>    
-    </div>
-
-    <div class="body-container">
-     <div class="page-body">
-        <div class="body-content">
-            <li class="btn" > <a href="#">Vision</a></li>
-            <li class="btn" > <a href="#">Leadership</a></li>
+        <div class="page-description">
+            <div class="title">About</div>
+            <div class="content">{{currentPage}}</div>
         </div>
-     </div>
-
     </div>
+    
+    <div class="page-nav">
+        <div class="nav" (click)="changePageContent('vision')">Vision</div>
+        <div class="nav" (click)="changePageContent('leadership')">Leadership</div>
+    </div>
+
+    <app-about-leadership *ngIf="!displayVision"></app-about-leadership>
+    <app-about-vision *ngIf="displayVision"></app-about-vision>
 </div>
