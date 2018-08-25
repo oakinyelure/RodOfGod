@@ -7,6 +7,7 @@ import {ButtonModule} from 'primeng/button';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {FormsModule } from '@angular/forms';
 import {ToastModule} from 'primeng/toast';
+import { BlogLikeComponent } from './blog-like/blog-like.component';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import {ToastModule} from 'primeng/toast';
     FormsModule,
     ToastModule
   ],
-  declarations: [BlogComponent],
+  declarations: [BlogComponent, BlogLikeComponent],
   exports: [BlogComponent]
 })
 export class BlogModule { }

@@ -19,6 +19,8 @@ namespace RodOfGod.Handlers.BlogHandler
 
         public async Task<CreateBlogResponse> Handle(CreateBlogRequest request, CancellationToken cancellationToken)
         {
+            var response = new CreateBlogResponse();
+
             using (var context = new RogDBContext())
             {
                 var newBlog = context.Blogs.Add(new DataContexts.Blog()
@@ -31,6 +33,11 @@ namespace RodOfGod.Handlers.BlogHandler
                 try
                 {
                     await context.SaveChangesAsync(cancellationToken);
+                    response.BlogId = newBlog.BlogID;
+                    response.BlogPost = newBlog.BlogPost;
+                    response.BlogTypeID = newBlog.BlogTypeID;
+                    response.CreateDate = newBlog.CreateDate;
+                    
                 }
                 catch(Exception ex)
                 {
@@ -38,13 +45,19 @@ namespace RodOfGod.Handlers.BlogHandler
                     throw new CreateBlogException(ex);
                 }
             }
-            return new CreateBlogResponse();
+            return response;
         }
     }
 
     public class CreateBlogResponse
     {
-        
+        public int BlogId { get; set; }
+
+        public string BlogPost { get; set; }
+
+        public int BlogTypeID { get; set; }
+
+        public DateTime CreateDate { get; set; }
     }
 
     public class CreateBlogRequest: IRequest<CreateBlogResponse>

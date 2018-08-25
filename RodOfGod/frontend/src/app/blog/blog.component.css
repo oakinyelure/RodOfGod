@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+::ng-deep body {
+    background: #FAFCFD;
+}
+
 .page-title {
     font-family: "Roboto Slab","Museo","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: bold;
@@ -18,7 +22,7 @@
 
 .blog-content {
     display: grid;
-    grid-template-columns: 30% auto 30%;
+    grid-template-columns: 20% auto 20%;
 }
 
 .blog-panel {
@@ -56,4 +60,32 @@
     font-weight: 500;
     font-size: 18px;
 }
+
+.user-post {
+    margin-top: 25px;
+}
+
+.user-post-panel {
+    margin-top: 15px;
+    border: 2px solid #EEEAEA;
+    background: #fff;
+    -webkit-box-shadow: 0px 1px 25px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 25px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 25px -12px rgba(0,0,0,0.75);
+}
+
+.user-post-panel .panel-header {
+    background: #EEEAEA;
+    padding: 5px;
+    font-size: 16;
+    font-weight: 600;
+    -webkit-box-shadow: inset 0px 1px 35px -10px rgba(92,90,92,1);
+    -moz-box-shadow: inset 0px 1px 35px -10px rgba(92,90,92,1);
+    box-shadow: inset 0px 1px 35px -10px rgba(92,90,92,1);
+}
+
+.user-post-panel .post-body {
+    padding: 10px;
+}
+
 

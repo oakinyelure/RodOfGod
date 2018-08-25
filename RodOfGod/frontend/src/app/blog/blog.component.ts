@@ -4,6 +4,7 @@ import { Blog } from './model/blog.model';
 import { NewBlog } from './model/new_blog.model';
 import { BlogTypes } from '../constants/enums/blog-types.enum';
 import {MessageService} from 'primeng/api';
+import { DateHelper } from '../core/helpers/date.helper';
 
 @Component({
   selector: 'app-blog',
@@ -16,13 +17,15 @@ export class BlogComponent implements OnInit {
   blogs: Blog[];
   newBlog = new NewBlog();
 
-  constructor(private blogService: BlogService,private notification: MessageService) { }
+  constructor(private blogService: BlogService,private notification: MessageService, private dateHelper: DateHelper) { }
 
   ngOnInit() {
 
     this.blogService.getAllBlogs().subscribe(response => {
       this.blogs = response.blogs;
-      console.log(this.blogs)
+      this.blogs.forEach(element => {
+
+      });
     });
   }
 
@@ -30,11 +33,15 @@ export class BlogComponent implements OnInit {
   createBlog(){
     this.newBlog.blogTypeId = BlogTypes.Testimony;
     this.newBlog.createDate = new Date();
-    this.blogService.createBlog(this.newBlog).subscribe(response => {
-      this.notification.add({key: 'postNotification', severity:'success', summary:'Testimony shared', detail:'Your testimony have been shared'});
-      this.newBlog.blogPost = null;
-    });
-  }
 
+    if(this.newBlog.blogPost.trim()) {
+      this.blogService.createBlog(this.newBlog).subscribe(response => {
+        console.log(response);
+        this.notification.add({key: 'postNotification', severity:'success', summary:'Testimony shared', detail:'Your testimony have been shared'});
+        this.blogs.unshift({blogId: response.blogId, blogPost: response.blogPost, createDate: response.createDate, blogTypeId: response.blogTypeId});
+        this.newBlog.blogPost = null;
+      });
+    }
+  }
 
 }
