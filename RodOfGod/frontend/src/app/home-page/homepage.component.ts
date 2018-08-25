@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserProfile } from './homepage-models/user-profile.model';
+import { RouteHelper } from '../core/helpers/route.helper';
 
 @Component({
   selector: 'app-homepage',
@@ -8,7 +9,7 @@ import { UserProfile } from './homepage-models/user-profile.model';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: RouteHelper) { }
 
   isFindDistanceClicked: boolean = false;
   userDistanceToChurch:number;
@@ -34,7 +35,7 @@ export class HomePageComponent implements OnInit {
    * @param route
    */
   navigate(route: string): void {
-    window.location.assign('/#/'+route);
+    this.router.navigate(route);
   }
 
 }
