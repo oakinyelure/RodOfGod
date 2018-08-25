@@ -1,0 +1,33 @@
+.emotion-section {
+    border-top: 2px solid #89BDD1;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.emotion-button {
+    cursor: pointer;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 2em;
+    margin-right: 5px;
+}
+
+.emotion-button:hover {
+    background: #89BDD1;
+}
+
+.emotion-bar {
+    display: inline-flex;
+}
+
+.blog-comment-section {
+    border-top: 2px solid #89BDD1;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.comment-field {
+    width: 100%;
+    text-transform: none;
+    text-align: left;
+}
