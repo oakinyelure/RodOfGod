@@ -1,0 +1,20 @@
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+.paragraph-content{
+    top: 0;
+    margin-left: 200px
+}
+
+.row{
+margin-bottom: 7em;
+padding-top: 7em;
+}
+
+#lead-comp{
+    background-color: rgba(0, 0, 0, 0.088);
+}
