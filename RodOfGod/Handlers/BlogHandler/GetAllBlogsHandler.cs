@@ -25,7 +25,7 @@ namespace RodOfGod.Handlers.Blog
                     CreateDate = b.CreateDate
                 });
 
-                response.Blogs = await blog.ToListAsync(cancellationToken);
+                response.Blogs = await blog.OrderByDescending(b => b.CreateDate).ToListAsync(cancellationToken);
             }
 
             return response;
