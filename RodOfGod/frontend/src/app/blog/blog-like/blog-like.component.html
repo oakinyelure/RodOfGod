@@ -1,0 +1,14 @@
+
+<div class="emotion-section">
+
+  <div class="emotion-bar">
+    <div *ngIf="!liked" class="like-button emotion-button"><i class="pi pi-check" style="align-content: center"></i>Like</div>
+    <div *ngIf="liked" class="like-button emotion-button"><i class="pi pi-check" style="align-content: center"></i>Unlike</div>
+    <div class="like-button emotion-button" (click)="createBlogComment()"><i class="pi pi-external-link" style="align-content: center"></i>Comment</div>
+  </div>
+
+</div>
+
+<div class="blog-comment-section" *ngIf="openCommentBox">
+    <textarea [rows]="1" [cols]="100" class="comment-field" pInputTextarea autoResize="autoResize" placeholder="Write a comment"></textarea>
+</div>

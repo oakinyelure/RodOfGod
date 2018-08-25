@@ -1,0 +1,37 @@
+<div class="landing-content">
+  <div class="row">
+
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-8">
+        <div class="header-one page-header">Rod of God</div>
+        
+          <form>
+            <input [(ngModel)]="userProfile.address" name = "address" type="text" placeholder="Enter your Address">
+            <button (click)="getMembersAround($event)" class="submit" type="submit">Request Ride</button>
+          </form>
+
+          <div class="rog-text-error" *ngIf="errorMessage">
+            <div>{{errorMessage}}</div>
+          </div>
+
+          <div class="app-routes">
+              <button class="route-link-button" mat-button (click)="navigate('about')">about</button>
+              <button class="route-link-button" mat-button (click)="navigate('livesermon')">live sermon</button>
+              <button class="route-link-button" mat-button (click)="navigate('give')">give</button>
+              <button class="route-link-button" mat-button (click)="navigate('blog')">blog</button>
+              <button class="route-link-button" mat-button (click)="navigate('messagestore')">message store</button>
+              <button class="route-link-button" mat-button (click)="navigate('musicstore')">music store</button>
+          </div>
+
+    </div>
+
+    <div class="col-sm-2"></div>
+
+  </div>
+
+</div>
+
+
+
+
