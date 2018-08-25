@@ -1,6 +1,6 @@
 <div class="about-page">
     <div class="page-breadcrumb">
-        <app-top-nav></app-top-nav>
+        <app-top-nav [page]="page"></app-top-nav>
 
         <div class="page-description">
             <div class="title">About</div>
@@ -13,6 +13,9 @@
         <div class="nav" (click)="changePageContent('leadership')">Leadership</div>
     </div>
 
-    <app-about-leadership *ngIf="!displayVision"></app-about-leadership>
-    <app-about-vision *ngIf="displayVision"></app-about-vision>
+    <div class="page-nav-content">
+        <app-about-leadership *ngIf="!displayVision"></app-about-leadership>
+        <app-about-vision *ngIf="displayVision"></app-about-vision>
+    </div>
+    
 </div>

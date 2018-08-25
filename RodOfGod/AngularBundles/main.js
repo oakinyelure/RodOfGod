@@ -303,6 +303,132 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/about/about-leadership/about-leadership.component.css":
+/*!***********************************************************************!*\
+  !*** ./src/app/about/about-leadership/about-leadership.component.css ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "img {\r\n    border: 1px solid #ddd;\r\n    border-radius: 4px;\r\n    padding: 5px;\r\n    width: 150px;\r\n}\r\n\r\n.paragraph-content{\r\n    top: 0;\r\n    margin-left: 200px\r\n}\r\n\r\n.row{\r\nmargin-bottom: 7em;\r\npadding-top: 7em;\r\n}\r\n\r\n#lead-comp{\r\n    background-color: rgba(0, 0, 0, 0.088);\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/about/about-leadership/about-leadership.component.html":
+/*!************************************************************************!*\
+  !*** ./src/app/about/about-leadership/about-leadership.component.html ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"lead-comp\">\r\n  <section role=\"outter\">\r\n    <div class=\"container\">\r\n      <section class=\"staff mt-4\">\r\n        <article class=\"row mb-8\">\r\n          <div class=\"col-sm-4\">\r\n            <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\">\r\n          </div>\r\n          <div class=\"col-sm-8\">\r\n            <h3>J.K Balogun</h3>\r\n            <h4>Main Pastor</h4>\r\n            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione, illo </p>\r\n            <p>quas sapiente aliquid maiores dolores, sequi, veritatis dignissimos voluptates voluptatem odio </p>\r\n            <p>temporibus aut excepturi inventore saepe laborum. Exercitationem, possimus!</p>\r\n          </div>\r\n        </article>\r\n        <article class=\"row mb-8\">\r\n            <div class=\"col-sm-4\">\r\n              <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\">\r\n            </div>\r\n            <div class=\"col-sm-8\">\r\n              <h3>John Doe</h3>\r\n              <h4>Another Executive</h4>\r\n              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione, illo </p>\r\n              <p>quas sapiente aliquid maiores dolores, sequi, veritatis dignissimos voluptates voluptatem odio </p>\r\n              <p>temporibus aut excepturi inventore saepe laborum. Exercitationem, possimus!</p>\r\n            </div>\r\n          </article>\r\n          <article class=\"row mb-8\">\r\n              <div class=\"col-sm-4\">\r\n                <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\">\r\n              </div>\r\n              <div class=\"col-sm-8\">\r\n                <h3>Jane Sullivan</h3>\r\n                <h4>Another Executive</h4>\r\n                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione, illo </p>\r\n                <p>quas sapiente aliquid maiores dolores, sequi, veritatis dignissimos voluptates voluptatem odio </p>\r\n                <p>temporibus aut excepturi inventore saepe laborum. Exercitationem, possimus!</p>\r\n              </div>\r\n            </article>\r\n      </section>\r\n    </div>\r\n  </section>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/about/about-leadership/about-leadership.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/about/about-leadership/about-leadership.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: AboutLeadershipComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutLeadershipComponent", function() { return AboutLeadershipComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AboutLeadershipComponent = /** @class */ (function () {
+    function AboutLeadershipComponent() {
+    }
+    AboutLeadershipComponent.prototype.ngOnInit = function () {
+    };
+    AboutLeadershipComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-about-leadership',
+            template: __webpack_require__(/*! ./about-leadership.component.html */ "./src/app/about/about-leadership/about-leadership.component.html"),
+            styles: [__webpack_require__(/*! ./about-leadership.component.css */ "./src/app/about/about-leadership/about-leadership.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AboutLeadershipComponent);
+    return AboutLeadershipComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/about/about-vision/about-vision.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/about/about-vision/about-vision.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".container{\r\n    margin-left: 20px;\r\n    padding-left: 20px;\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/about/about-vision/about-vision.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/about/about-vision/about-vision.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"vision-page\">\r\n  <section role=\"outter\" class=\"bg-cover section section-fullWidthcontent\r\n  position-relative text-left \">\r\n    <div class=\"container\">\r\n      <div class=\"text-center row\">\r\n        <div class=\"col-md-10 mx-auto img-fluid-parent section-content \">\r\n          <h4>Intoducing People To The </h4>\r\n          <h1> ROD OF GOD </h1>\r\n          <p>The Mission of RCCG Rod of God Parish, Indianapolis is to bring people\r\n             <br> to the realization of the fulfillment of their God given dreams and potentials, \r\n             <br> and to teach people the Word of God with integrity.</p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </section>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/about/about-vision/about-vision.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/about/about-vision/about-vision.component.ts ***!
+  \**************************************************************/
+/*! exports provided: AboutVisionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutVisionComponent", function() { return AboutVisionComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AboutVisionComponent = /** @class */ (function () {
+    function AboutVisionComponent() {
+    }
+    AboutVisionComponent.prototype.ngOnInit = function () {
+    };
+    AboutVisionComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-about-vision',
+            template: __webpack_require__(/*! ./about-vision.component.html */ "./src/app/about/about-vision/about-vision.component.html"),
+            styles: [__webpack_require__(/*! ./about-vision.component.css */ "./src/app/about/about-vision/about-vision.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AboutVisionComponent);
+    return AboutVisionComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/about/about.component.css":
 /*!*******************************************!*\
   !*** ./src/app/about/about.component.css ***!
@@ -310,7 +436,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".about-page{\r\n    background: black;\r\nbackground-size: cover;\r\ncolor: #fff;\r\ntext-align: center;\r\ntext-rendering: optimizeLegibility;\r\npadding: 15px 10px 15px;\r\nheight:100vh;\r\nwidth: 100%;\r\nposition: relative;\r\n}\r\n\r\n.head_container{\r\nposition: absolute;\r\nright: 0;\r\n}\r\n\r\n.home-button{\r\n    position: absolute;\r\n    left: 20px;\r\n    color: white;\r\n    font-family: helvetica;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    background-color: #ff4081;\r\n    width:-webkit-fit-content;\r\n    width:-moz-fit-content;\r\n    width:fit-content;\r\n    border-radius: 10px;\r\n\r\n}\r\n\r\n.btn, a{\r\n    color: #ff4081;\r\n    font-family: helvetica;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n   \r\n}\r\n\r\na:hover{\r\ncolor:white;\r\n}\r\n\r\na:active {\r\n    color: black;\r\n  }\r\n\r\n.page-body{\r\n      vertical-align: middle;\r\n      margin-top: 20em;\r\n      background-color: rgba(169, 169, 169, 0.212);\r\n  }"
+module.exports = ".page-breadcrumb {\r\n    height: 50vh;\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    width: 100%;\r\n    background-size: cover;\r\n}\r\n\r\n.btn, a{\r\n    color: #ff4081;\r\n    font-family: helvetica;\r\n    text-decoration: none;\r\n    text-transform: uppercase; \r\n}\r\n\r\n.page-nav {\r\n    display: inline-flex;\r\n    justify-content: center;\r\n    align-content: center;\r\n    align-self: center;\r\n    background: #212529;\r\n    width: 100%;\r\n    color: #fff;\r\n    font-weight: 500;\r\n    letter-spacing: 1px;\r\n    padding: 10px;\r\n}\r\n\r\n.page-nav .nav {\r\n    margin-left: 20px;\r\n    cursor: pointer;\r\n}\r\n\r\n.page-description {\r\n    justify-content: center;\r\n    align-content: center;\r\n    text-align: center;\r\n    margin-top: 40px;\r\n}\r\n\r\n.page-description .title {\r\n    font-weight: 400;\r\n    text-transform: uppercase;\r\n    color: #fff;\r\n}\r\n\r\n.page-description .content {\r\n    font-weight: 700;\r\n    text-transform: uppercase;\r\n    color: #fff;\r\n    font-size: 5rem;\r\n    letter-spacing: .5rem;\r\n    padding: 10px;\r\n}\r\n"
 
 /***/ }),
 
@@ -321,7 +447,7 @@ module.exports = ".about-page{\r\n    background: black;\r\nbackground-size: cov
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"about-page\">\r\n\r\n    <div class=\"page-header\">\r\n        <button class=\"home-button\" type=\"button\">ROG</button>\r\n            <div class=\"head_container\">\r\n                <a href=\"#\" class=\"btn\">about</a>\r\n                <a href=\"#\" class=\"btn\">live sermon</a>\r\n                <a href=\"#\" class=\"btn\">give</a>\r\n                <a href=\"#\" class=\"btn\">blog</a>\r\n                <a href=\"#\" class=\"btn\">message store</a>\r\n                <a href=\"#\" class=\"btn\">music store</a>\r\n            </div>    \r\n    </div>\r\n\r\n    <div class=\"body-container\">\r\n     <div class=\"page-body\">\r\n        <div class=\"body-content\">\r\n            <li class=\"btn\" > <a href=\"#\">Vision</a></li>\r\n            <li class=\"btn\" > <a href=\"#\">Leadership</a></li>\r\n        </div>\r\n     </div>\r\n\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"about-page\">\r\n    <div class=\"page-breadcrumb\">\r\n        <app-top-nav [page]=\"page\"></app-top-nav>\r\n\r\n        <div class=\"page-description\">\r\n            <div class=\"title\">About</div>\r\n            <div class=\"content\">{{currentPage}}</div>\r\n        </div>\r\n    </div>\r\n    \r\n    <div class=\"page-nav\">\r\n        <div class=\"nav\" (click)=\"changePageContent('vision')\">Vision</div>\r\n        <div class=\"nav\" (click)=\"changePageContent('leadership')\">Leadership</div>\r\n    </div>\r\n\r\n    <app-about-leadership *ngIf=\"!displayVision\"></app-about-leadership>\r\n    <app-about-vision *ngIf=\"displayVision\"></app-about-vision>\r\n</div>"
 
 /***/ }),
 
@@ -348,9 +474,28 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var AboutComponent = /** @class */ (function () {
     function AboutComponent() {
+        this.displayVision = true;
+        this.page = "about";
+        this.currentPage = "vision";
     }
     AboutComponent.prototype.ngOnInit = function () {
     };
+    AboutComponent.prototype.changePageContent = function (navSection) {
+        switch (navSection.toLowerCase()) {
+            case "leadership":
+                this.displayVision = false;
+                this.currentPage = "leadership";
+                break;
+            case "vision":
+                this.displayVision = true;
+                this.currentPage = "vision";
+                break;
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], AboutComponent.prototype, "page", void 0);
     AboutComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-about',
@@ -381,12 +526,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _about_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about.component */ "./src/app/about/about.component.ts");
 /* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/esm5/button.es5.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _about_leadership_about_leadership_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./about-leadership/about-leadership.component */ "./src/app/about/about-leadership/about-leadership.component.ts");
+/* harmony import */ var _about_vision_about_vision_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./about-vision/about-vision.component */ "./src/app/about/about-vision/about-vision.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -400,9 +551,10 @@ var AboutModule = /** @class */ (function () {
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _angular_material_button__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+                _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"]
             ],
-            declarations: [_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"]],
+            declarations: [_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"], _about_leadership_about_leadership_component__WEBPACK_IMPORTED_MODULE_6__["AboutLeadershipComponent"], _about_vision_about_vision_component__WEBPACK_IMPORTED_MODULE_7__["AboutVisionComponent"]],
             exports: [_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"]],
             bootstrap: [_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"]]
         })
@@ -678,7 +830,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Lato');\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p-toast position=\"top-center\" key=\"postNotification\"></p-toast>\r\n<app-top-nav [page]=\"page\"></app-top-nav>\r\n\r\n<div class=\"container-fluid\">  \r\n\r\n  <div class=\"top-section\">\r\n    <div class=\"page-title\">\r\n      The ROG Feed\r\n    </div>\r\n\r\n    <div class=\"page-description\">\r\n      The church's avenue for social interaction. Share your testimonies, moments and interact with the church community\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"blog-content\">\r\n\r\n    <div class=\"summary-content\">\r\n    </div>\r\n\r\n    <div class=\"post-content\">\r\n\r\n      <div class=\"blog-panel\">\r\n        <div class=\"panel-header\">\r\n          <div class=\"content\">\r\n            <div>Testimony</div>\r\n          </div>\r\n        </div>\r\n        <div class=\"panel-body\">\r\n            <textarea rows=\"5\" cols=\"30\"  [(ngModel)]=\"newBlog.blogPost\" pInputTextarea class=\"post-box\" placeholder=\"What are you thankful for?\"></textarea>\r\n        </div>\r\n        <div class=\"panel-footer\">\r\n            <button pButton class=\"post-button\" type=\"button\" icon=\"pi pi-pencil\" iconPos=\"right\" label=\"Share\" (click)=\"createBlog()\" *ngIf=\"newBlog.blogPost\"></button>\r\n        </div>\r\n      </div>\r\n\r\n\r\n      <div class=\"user-post\" *ngIf=\"blogs\">\r\n          <div class=\"user-post-panel\" *ngFor=\"let blog of blogs\">\r\n            <div class=\"panel-header\">\r\n              <div class=\"content\">\r\n                <div>Posted {{dateHelper.fromNow(blog.createDate)}} - {{blog.createDate}}</div>\r\n              </div>\r\n            </div>\r\n            <div class=\"post-body\">\r\n                {{blog.blogPost}}\r\n                <div class=\"emotion-bar\">\r\n                  <app-blog-like [selectedBlog]=\"blog\"></app-blog-like>\r\n                </div>\r\n            </div>\r\n\r\n\r\n          </div>\r\n        </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"ad-content\">\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n\r\n</div>"
+module.exports = "<p-toast position=\"top-center\" key=\"postNotification\"></p-toast>\r\n<app-top-nav [page]=\"page\"></app-top-nav>\r\n\r\n<div class=\"container-fluid\">  \r\n\r\n  <div class=\"top-section\">\r\n    <div class=\"page-title\">\r\n      The ROG Feed\r\n    </div>\r\n\r\n    <div class=\"page-description\">\r\n      The church's avenue for social interaction. Share your testimonies, moments and interact with the church community\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"blog-content\">\r\n\r\n    <div class=\"summary-content\">\r\n    </div>\r\n\r\n    <div class=\"post-content\">\r\n\r\n      <div class=\"blog-panel\">\r\n        <div class=\"panel-header\">\r\n          <div class=\"content\">\r\n            <div>Testimony</div>\r\n          </div>\r\n        </div>\r\n        <div class=\"panel-body\">\r\n            <textarea rows=\"5\" cols=\"30\"  [(ngModel)]=\"newBlog.blogPost\" pInputTextarea class=\"post-box\" placeholder=\"What are you thankful for?\"></textarea>\r\n        </div>\r\n        <div class=\"panel-footer\">\r\n            <button pButton class=\"post-button\" type=\"button\" icon=\"pi pi-pencil\" iconPos=\"right\" label=\"Share\" (click)=\"createBlog()\" *ngIf=\"newBlog.blogPost\"></button>\r\n        </div>\r\n      </div>\r\n\r\n\r\n      <div class=\"user-post\" *ngIf=\"blogs\">\r\n          <div class=\"user-post-panel\" *ngFor=\"let blog of blogs\">\r\n            <div class=\"panel-header\">\r\n              <div class=\"content\">\r\n                <div>Posted {{dateHelper.fromNow(blog.createDate)}}</div>\r\n              </div>\r\n            </div>\r\n            <div class=\"post-body\">\r\n                {{blog.blogPost}}\r\n                <div class=\"emotion-bar\">\r\n                  <app-blog-like [selectedBlog]=\"blog\"></app-blog-like>\r\n                </div>\r\n            </div>\r\n\r\n\r\n          </div>\r\n        </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"ad-content\">\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n\r\n</div>"
 
 /***/ }),
 
@@ -1767,6 +1919,7 @@ module.exports = ".app-navigation {\r\n    background: #4D1818;\r\n    padding: 
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"nav-wrapper\">\r\n\r\n  <nav class=\"nav fixed-top app-navigation\">\r\n      <div class=\"nav-link {{(page === 'home' ? 'active' : '')}}\" href=\"#\" (click)=\"navigate('home')\">Home</div>\r\n      <div class=\"nav-link {{(page === 'about' ? 'active' : '')}}\" href=\"#\"  (click)=\"navigate('about')\">About</div>\r\n      <div class=\"nav-link {{(page === 'livesermon' ? 'active' : '')}}\" href=\"#\"  (click)=\"navigate('livesermon')\">Live Service</div>\r\n      <div class=\"nav-link {{(page === 'give' ? 'active' : '')}}\" href=\"#\"  (click)=\"navigate('give')\">Give</div>\r\n      <div class=\"nav-link {{(page === 'blog' ? 'active' : '')}}\" href=\"#\"  (click)=\"navigate('blog')\">Rog Feed</div>\r\n      <div class=\"nav-link {{(page === 'shop' ? 'active' : '')}}\" href=\"#\"  (click)=\"navigate('messagestore')\">Shop</div>\r\n    </nav>\r\n  \r\n  </div>"
+
 /***/ }),
 
 /***/ "./src/app/shared/top-nav/top-nav.component.ts":
@@ -1994,7 +2147,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\kunle\source\repos\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\oakin\Documents\public_dev\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })
