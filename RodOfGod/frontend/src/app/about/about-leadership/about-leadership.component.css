@@ -5,16 +5,7 @@ img {
     width: 150px;
 }
 
-.paragraph-content{
-    top: 0;
-    margin-left: 200px
-}
-
-.row{
-margin-bottom: 7em;
-padding-top: 7em;
-}
-
-#lead-comp{
+.lead-comp {
     background-color: rgba(0, 0, 0, 0.088);
+    padding-top: 30px;
 }
