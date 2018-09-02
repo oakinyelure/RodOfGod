@@ -1,0 +1,15 @@
+.vision-page{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.vision-content{
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+h3{
+    margin-top: 60px;
+}
