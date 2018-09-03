@@ -310,7 +310,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "img {\r\n    border: 1px solid #ddd;\r\n    border-radius: 4px;\r\n    padding: 5px;\r\n    width: 150px;\r\n}\r\n\r\n.paragraph-content{\r\n    top: 0;\r\n    margin-left: 200px\r\n}\r\n\r\n.row{\r\nmargin-bottom: 7em;\r\npadding-top: 7em;\r\n}\r\n\r\n#lead-comp{\r\n    background-color: rgba(0, 0, 0, 0.088);\r\n}"
+module.exports = "img {\r\n    border: 1px solid #ddd;\r\n    border-radius: 4px;\r\n    padding: 5px;\r\n    width: 150px;\r\n}\r\n\r\n.lead-comp {\r\n    background-color: rgba(0, 0, 0, 0.088);\r\n    padding-top: 30px;\r\n}"
 
 /***/ }),
 
@@ -321,7 +321,7 @@ module.exports = "img {\r\n    border: 1px solid #ddd;\r\n    border-radius: 4px
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"lead-comp\">\r\n  <section role=\"outter\">\r\n    <div class=\"container\">\r\n      <section class=\"staff mt-4\">\r\n        <article class=\"row mb-8\">\r\n          <div class=\"col-sm-4\">\r\n            <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\">\r\n          </div>\r\n          <div class=\"col-sm-8\">\r\n            <h3>J.K Balogun</h3>\r\n            <h4>Main Pastor</h4>\r\n            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione, illo </p>\r\n            <p>quas sapiente aliquid maiores dolores, sequi, veritatis dignissimos voluptates voluptatem odio </p>\r\n            <p>temporibus aut excepturi inventore saepe laborum. Exercitationem, possimus!</p>\r\n          </div>\r\n        </article>\r\n        <article class=\"row mb-8\">\r\n            <div class=\"col-sm-4\">\r\n              <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\">\r\n            </div>\r\n            <div class=\"col-sm-8\">\r\n              <h3>John Doe</h3>\r\n              <h4>Another Executive</h4>\r\n              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione, illo </p>\r\n              <p>quas sapiente aliquid maiores dolores, sequi, veritatis dignissimos voluptates voluptatem odio </p>\r\n              <p>temporibus aut excepturi inventore saepe laborum. Exercitationem, possimus!</p>\r\n            </div>\r\n          </article>\r\n          <article class=\"row mb-8\">\r\n              <div class=\"col-sm-4\">\r\n                <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\">\r\n              </div>\r\n              <div class=\"col-sm-8\">\r\n                <h3>Jane Sullivan</h3>\r\n                <h4>Another Executive</h4>\r\n                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione, illo </p>\r\n                <p>quas sapiente aliquid maiores dolores, sequi, veritatis dignissimos voluptates voluptatem odio </p>\r\n                <p>temporibus aut excepturi inventore saepe laborum. Exercitationem, possimus!</p>\r\n              </div>\r\n            </article>\r\n      </section>\r\n    </div>\r\n  </section>\r\n</div>"
+module.exports = "<div class=\"lead-comp\">\r\n  <section role=\"outter\">\r\n    <div class=\"container\">\r\n      <section class=\"staff mt-4\">\r\n        <article class=\"row mb-8\">\r\n          <div class=\"col-sm-4\">\r\n            <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\">\r\n          </div>\r\n          <div class=\"col-sm-8\">\r\n            <h3>J.K Balogun</h3>\r\n            <h4>Main Pastor</h4>\r\n            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione, illo </p>\r\n            <p>quas sapiente aliquid maiores dolores, sequi, veritatis dignissimos voluptates voluptatem odio </p>\r\n            <p>temporibus aut excepturi inventore saepe laborum. Exercitationem, possimus!</p>\r\n          </div>\r\n        </article>\r\n        <article class=\"row mb-8\">\r\n            <div class=\"col-sm-4\">\r\n              <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\">\r\n            </div>\r\n            <div class=\"col-sm-8\">\r\n              <h3>John Doe</h3>\r\n              <h4>Another Executive</h4>\r\n              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione, illo </p>\r\n              <p>quas sapiente aliquid maiores dolores, sequi, veritatis dignissimos voluptates voluptatem odio </p>\r\n              <p>temporibus aut excepturi inventore saepe laborum. Exercitationem, possimus!</p>\r\n            </div>\r\n          </article>\r\n          <article class=\"row mb-8\">\r\n              <div class=\"col-sm-4\">\r\n                <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\">\r\n              </div>\r\n              <div class=\"col-sm-8\">\r\n                <h3>Jane Sullivan</h3>\r\n                <h4>Another Executive</h4>\r\n                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione, illo </p>\r\n                <p>quas sapiente aliquid maiores dolores, sequi, veritatis dignissimos voluptates voluptatem odio </p>\r\n                <p>temporibus aut excepturi inventore saepe laborum. Exercitationem, possimus!</p>\r\n              </div>\r\n            </article>\r\n      </section>\r\n    </div>\r\n  </section>\r\n</div>"
 
 /***/ }),
 
@@ -373,7 +373,7 @@ var AboutLeadershipComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container{\r\n    margin-left: 20px;\r\n    padding-left: 20px;\r\n}"
+module.exports = "\r\n.about-vision-header {\r\n    justify-content: center;\r\n    text-align: center;\r\n    padding-top: 40px;\r\n    font-size: 2rem;\r\n    font-weight: 600;\r\n}\r\n\r\n.about-vision-content {\r\n    padding: 20px 25px 25px 20px;\r\n}\r\n"
 
 /***/ }),
 
@@ -384,7 +384,7 @@ module.exports = ".container{\r\n    margin-left: 20px;\r\n    padding-left: 20p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"vision-page\">\r\n  <section role=\"outter\" class=\"bg-cover section section-fullWidthcontent\r\n  position-relative text-left \">\r\n    <div class=\"container\">\r\n      <div class=\"text-center row\">\r\n        <div class=\"col-md-10 mx-auto img-fluid-parent section-content \">\r\n          <h4>Intoducing People To The </h4>\r\n          <h1> ROD OF GOD </h1>\r\n          <p>The Mission of RCCG Rod of God Parish, Indianapolis is to bring people\r\n             <br> to the realization of the fulfillment of their God given dreams and potentials, \r\n             <br> and to teach people the Word of God with integrity.</p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </section>\r\n</div>\r\n"
+module.exports = "<div>\r\n    <div class=\"about-vision-header\">\r\n        <div>Introducing People To Christ <br/><small>The only way to salvation</small></div>\r\n    </div> \r\n    \r\n    <div class=\"about-vision-content\">\r\n        <div class=\"deep-colored-content\">\r\n            fufuvudgsdhuv jihisfg jghdfhugid\r\n        </div>\r\n        <div class=\"light-colored-content\">\r\n\r\n        </div>\r\n    </div>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -436,7 +436,7 @@ var AboutVisionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".page-breadcrumb {\r\n    height: 50vh;\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    width: 100%;\r\n    background-size: cover;\r\n}\r\n\r\n.btn, a{\r\n    color: #ff4081;\r\n    font-family: helvetica;\r\n    text-decoration: none;\r\n    text-transform: uppercase; \r\n}\r\n\r\n.page-nav {\r\n    display: inline-flex;\r\n    justify-content: center;\r\n    align-content: center;\r\n    align-self: center;\r\n    background: #212529;\r\n    width: 100%;\r\n    color: #fff;\r\n    font-weight: 500;\r\n    letter-spacing: 1px;\r\n    padding: 10px;\r\n}\r\n\r\n.page-nav .nav {\r\n    margin-left: 20px;\r\n    cursor: pointer;\r\n}\r\n\r\n.page-description {\r\n    justify-content: center;\r\n    align-content: center;\r\n    text-align: center;\r\n    margin-top: 40px;\r\n}\r\n\r\n.page-description .title {\r\n    font-weight: 400;\r\n    text-transform: uppercase;\r\n    color: #fff;\r\n}\r\n\r\n.page-description .content {\r\n    font-weight: 700;\r\n    text-transform: uppercase;\r\n    color: #fff;\r\n    font-size: 5rem;\r\n    letter-spacing: .5rem;\r\n    padding: 10px;\r\n}\r\n"
+module.exports = ".page-breadcrumb {\r\n    height: 50vh;\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    width: 100%;\r\n    background-size: cover;\r\n    margin-top: -20px;\r\n}\r\n\r\n.btn, a{\r\n    color: #ff4081;\r\n    font-family: helvetica;\r\n    text-decoration: none;\r\n    text-transform: uppercase; \r\n}\r\n\r\n.page-nav {\r\n    display: inline-flex;\r\n    justify-content: center;\r\n    align-content: center;\r\n    align-self: center;\r\n    background: #212529;\r\n    width: 100%;\r\n    color: #fff;\r\n    font-weight: 500;\r\n    letter-spacing: 1px;\r\n    padding: 10px;\r\n}\r\n\r\n.page-nav .nav {\r\n    margin-left: 20px;\r\n    cursor: pointer;\r\n}\r\n\r\n.page-description {\r\n    justify-content: center;\r\n    align-content: center;\r\n    text-align: center;\r\n    padding-top: 60px;\r\n}\r\n\r\n.page-description .title {\r\n    font-weight: 400;\r\n    text-transform: uppercase;\r\n    color: #fff;\r\n    margin-top: 60px;\r\n}\r\n\r\n.page-description .content {\r\n    font-weight: 700;\r\n    text-transform: uppercase;\r\n    color: #fff;\r\n    font-size: 5rem;\r\n    letter-spacing: .5rem;\r\n    padding: 10px;\r\n}\r\n\r\n.page-nav-content {\r\n    margin-top: -23px;\r\n}"
 
 /***/ }),
 
@@ -447,7 +447,7 @@ module.exports = ".page-breadcrumb {\r\n    height: 50vh;\r\n    background: lin
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"about-page\">\r\n    <div class=\"page-breadcrumb\">\r\n        <app-top-nav [page]=\"page\"></app-top-nav>\r\n\r\n        <div class=\"page-description\">\r\n            <div class=\"title\">About</div>\r\n            <div class=\"content\">{{currentPage}}</div>\r\n        </div>\r\n    </div>\r\n    \r\n    <div class=\"page-nav\">\r\n        <div class=\"nav\" (click)=\"changePageContent('vision')\">Vision</div>\r\n        <div class=\"nav\" (click)=\"changePageContent('leadership')\">Leadership</div>\r\n    </div>\r\n\r\n    <app-about-leadership *ngIf=\"!displayVision\"></app-about-leadership>\r\n    <app-about-vision *ngIf=\"displayVision\"></app-about-vision>\r\n</div>"
+module.exports = "<div class=\"about-page\">\r\n    <div class=\"page-breadcrumb\">\r\n        <app-top-nav [page]=\"page\"></app-top-nav>\r\n\r\n        <div class=\"page-description\">\r\n            <div class=\"title\">About</div>\r\n            <div class=\"content\">{{currentPage}}</div>\r\n        </div>\r\n    </div>\r\n    \r\n    <div class=\"page-nav\">\r\n        <div class=\"nav\" (click)=\"changePageContent('vision')\">Vision</div>\r\n        <div class=\"nav\" (click)=\"changePageContent('leadership')\">Leadership</div>\r\n    </div>\r\n\r\n    <div class=\"page-nav-content\">\r\n        <app-about-leadership *ngIf=\"!displayVision\"></app-about-leadership>\r\n        <app-about-vision *ngIf=\"displayVision\"></app-about-vision>\r\n    </div>\r\n    \r\n</div>"
 
 /***/ }),
 
@@ -1796,6 +1796,80 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/app/shared/footer/footer.component.css":
+/*!****************************************************!*\
+  !*** ./src/app/shared/footer/footer.component.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/shared/footer/footer.component.html":
+/*!*****************************************************!*\
+  !*** ./src/app/shared/footer/footer.component.html ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<footer>\n  <div class=\"container\">\n    <div class=\"md-flex flex-row\">\n      <div class=\"pl-md-5\">\n        <ul class=\"list-unstyled list-inline social-icons\">\n          <li class=\"list-inline-item\">\n            <a href=\"https://instagram.com/\" title=\"Instagram\"></a>\n          </li>\n\n        </ul>\n      </div>\n    </div>\n  </div>\n</footer>"
+
+/***/ }),
+
+/***/ "./src/app/shared/footer/footer.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/shared/footer/footer.component.ts ***!
+  \***************************************************/
+/*! exports provided: FooterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FooterComponent", function() { return FooterComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core_helpers_route_helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/helpers/route.helper */ "./src/app/core/helpers/route.helper.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var FooterComponent = /** @class */ (function () {
+    function FooterComponent(router) {
+        this.router = router;
+        this.appTitle = 'ROG';
+    }
+    FooterComponent.prototype.ngOnInit = function () {
+    };
+    FooterComponent.prototype.navigate = function (toPage) {
+        this.router.navigate(toPage);
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], FooterComponent.prototype, "page", void 0);
+    FooterComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-footer',
+            template: __webpack_require__(/*! ./footer.component.html */ "./src/app/shared/footer/footer.component.html"),
+            styles: [__webpack_require__(/*! ./footer.component.css */ "./src/app/shared/footer/footer.component.css")]
+        }),
+        __metadata("design:paramtypes", [_core_helpers_route_helper__WEBPACK_IMPORTED_MODULE_1__["RouteHelper"]])
+    ], FooterComponent);
+    return FooterComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/shared.component.css":
 /*!*********************************************!*\
   !*** ./src/app/shared/shared.component.css ***!
@@ -1872,12 +1946,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _top_nav_top_nav_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./top-nav/top-nav.component */ "./src/app/shared/top-nav/top-nav.component.ts");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/shared/footer/footer.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1889,7 +1965,7 @@ var SharedModule = /** @class */ (function () {
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
             ],
-            declarations: [_top_nav_top_nav_component__WEBPACK_IMPORTED_MODULE_2__["TopNavComponent"]],
+            declarations: [_top_nav_top_nav_component__WEBPACK_IMPORTED_MODULE_2__["TopNavComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]],
             exports: [_top_nav_top_nav_component__WEBPACK_IMPORTED_MODULE_2__["TopNavComponent"]]
         })
     ], SharedModule);
@@ -2147,7 +2223,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\oakin\Documents\public_dev\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\kunle\source\repos\RodOfGod\RodOfGod\frontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })

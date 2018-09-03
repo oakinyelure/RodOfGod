@@ -1,15 +1,12 @@
-.vision-page{
-    width: 100%;
-    display: flex;
+
+.about-vision-header {
     justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
-.vision-content{
-    margin-right: auto;
-    margin-left: auto;
-    
-}
-
-h3{
-    margin-top: 60px;
+.about-vision-content {
+    padding: 20px 25px 25px 20px;
 }
