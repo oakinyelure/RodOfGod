@@ -1,11 +1,25 @@
-img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.leadership-content {
+  display: grid;
+  grid-template-columns: 250px auto;
+  padding-top: 30px;
+  margin: 20px 150px;
 }
 
-.lead-comp {
-    background-color: rgba(0, 0, 0, 0.088);
-    padding-top: 30px;
+.leadership-content .profile-image {
+  padding-left: 20px;
+}
+
+.leadership-content .profile-description {
+  padding-left: 80px;
+}
+
+.leadership-page {
+  padding: 35px 40px 35px 40px;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 1rem;
+  font-weight: 600;
 }

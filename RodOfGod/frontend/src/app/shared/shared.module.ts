@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TopNavComponent } from './top-nav/top-nav.component';
-import { FooterComponent } from './footer/footer.component';
+import { BottomFooterComponent } from './bottom-footer/bottom-footer.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [TopNavComponent, FooterComponent],
-  exports: [TopNavComponent]
+  declarations: [
+    TopNavComponent,
+    BottomFooterComponent
+    ],
+  exports: [TopNavComponent, BottomFooterComponent]
 })
 export class SharedModule { }

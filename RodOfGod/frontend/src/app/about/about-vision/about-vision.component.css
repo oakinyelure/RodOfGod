@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 .about-vision-header {
     justify-content: center;
@@ -8,5 +9,21 @@
 }
 
 .about-vision-content {
-    padding: 20px 25px 25px 20px;
+    font-size: 20px;
+    letter-spacing: .1rem;
+    width: 100%;
+}
+
+.about-vision-content .deep-colored-content {
+    background-color: #eeeaea;
+}
+
+.about-vision-content .light-colored-content {
+    background-color: white;
+
+}
+
+
+.about-vision-content .content {
+    padding: 20px 50px 25px 50px;
 }
