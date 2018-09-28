@@ -310,7 +310,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "img {\r\n    border: 1px solid #ddd;\r\n    border-radius: 4px;\r\n    padding: 5px;\r\n    width: 150px;\r\n}\r\n\r\n.lead-comp {\r\n    background-color: rgba(0, 0, 0, 0.088);\r\n    padding-top: 30px;\r\n}"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');\r\n\r\n.leadership-content {\r\n  display: -ms-grid;\r\n  display: grid;\r\n  -ms-grid-columns: 250px auto;\r\n      grid-template-columns: 250px auto;\r\n  padding-top: 30px;\r\n  margin: 20px 150px;\r\n}\r\n\r\n.leadership-content .profile-image {\r\n  padding-left: 20px;\r\n}\r\n\r\n.leadership-content .profile-description {\r\n  padding-left: 80px;\r\n}\r\n\r\n.leadership-page {\r\n  padding: 35px 40px 35px 40px;\r\n  justify-content: center;\r\n  text-align: center;\r\n  padding-top: 40px;\r\n  font-size: 1rem;\r\n  font-weight: 600;\r\n}"
 
 /***/ }),
 
@@ -321,7 +321,7 @@ module.exports = "img {\r\n    border: 1px solid #ddd;\r\n    border-radius: 4px
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"lead-comp\">\r\n  <section role=\"outter\">\r\n    <div class=\"container\">\r\n      <section class=\"staff mt-4\">\r\n        <article class=\"row mb-8\">\r\n          <div class=\"col-sm-4\">\r\n            <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\">\r\n          </div>\r\n          <div class=\"col-sm-8\">\r\n            <h3>J.K Balogun</h3>\r\n            <h4>Main Pastor</h4>\r\n            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione, illo </p>\r\n            <p>quas sapiente aliquid maiores dolores, sequi, veritatis dignissimos voluptates voluptatem odio </p>\r\n            <p>temporibus aut excepturi inventore saepe laborum. Exercitationem, possimus!</p>\r\n          </div>\r\n        </article>\r\n        <article class=\"row mb-8\">\r\n            <div class=\"col-sm-4\">\r\n              <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\">\r\n            </div>\r\n            <div class=\"col-sm-8\">\r\n              <h3>John Doe</h3>\r\n              <h4>Another Executive</h4>\r\n              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione, illo </p>\r\n              <p>quas sapiente aliquid maiores dolores, sequi, veritatis dignissimos voluptates voluptatem odio </p>\r\n              <p>temporibus aut excepturi inventore saepe laborum. Exercitationem, possimus!</p>\r\n            </div>\r\n          </article>\r\n          <article class=\"row mb-8\">\r\n              <div class=\"col-sm-4\">\r\n                <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\">\r\n              </div>\r\n              <div class=\"col-sm-8\">\r\n                <h3>Jane Sullivan</h3>\r\n                <h4>Another Executive</h4>\r\n                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione, illo </p>\r\n                <p>quas sapiente aliquid maiores dolores, sequi, veritatis dignissimos voluptates voluptatem odio </p>\r\n                <p>temporibus aut excepturi inventore saepe laborum. Exercitationem, possimus!</p>\r\n              </div>\r\n            </article>\r\n      </section>\r\n    </div>\r\n  </section>\r\n</div>"
+module.exports = "<div class=\"leadership-page\">\r\n\r\n    <div class=\"leadership-content\">\r\n        <div class=\"profile-image\">\r\n            <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Main Pastor\" height=\"250\">\r\n        </div>\r\n\r\n        <div class=\"profile-description\">\r\n            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis corporis illo ducimus hic \r\n            voluptatibus molestias nisi obcaecati, a rerum nesciunt ratione accusantium itaque quod eaque\r\n            dicta explicabo dolorem eveniet natus!  \r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"leadership-content\" id=\"st-colored\">\r\n        <div class=\"profile-image\">\r\n            <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Another Pastor\" height=\"250\">\r\n        </div>\r\n\r\n        <div class=\"profile-description\">\r\n           Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque suscipit eos quo officia numquam psam sit provident quae nulla! Eum aspernatur hic dolores officiis maiores ducimus vero qui inventore nihil!6y\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"leadership-content\" id=\"st-colored\">\r\n        <div>\r\n            <img src=\"https://cdn1.vectorstock.com/i/1000x1000/19/00/user-icon-male-person-symbol-profile-avatar-sign-vector-18991900.jpg\" alt=\"Another Pastor\" height=\"250\">\r\n        </div>\r\n\r\n        <div class=\"profile-description\">\r\n            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex culpa, quos recusandae, nemo a voluptatum dolores minima provident magnam consectetur saepe voluptatem temporibus aliquid ad. Corrupti ratione dignissimos facilis nobis.\r\n        </div>\r\n    </div>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -373,7 +373,7 @@ var AboutLeadershipComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');\r\n\r\n.about-vision-header {\r\n    justify-content: center;\r\n    text-align: center;\r\n    padding-top: 40px;\r\n    font-size: 2rem;\r\n    font-weight: 600;\r\n}\r\n\r\n.about-vision-content {\r\n    font-size: 20px;\r\n    letter-spacing: .1rem;\r\n    width: 100%;\r\n}\r\n\r\n.about-vision-content .deep-colored-content {\r\n    background-color: #eeeaea;\r\n}\r\n\r\n.about-vision-content .light-colored-content {\r\n    background-color: white;\r\n\r\n}\r\n\r\n.about-vision-content .content {\r\n    padding: 20px 50px 25px 50px;\r\n}"
 
 /***/ }),
 
@@ -384,7 +384,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "<div>\r\n    <div class=\"about-vision-header\">\r\n        <div>Introducing People To Christ <br/><small>The only way to salvation</small></div>\r\n    </div> \r\n    \r\n    <div class=\"about-vision-content\">\r\n        <div class=\"content deep-colored-content\">\r\n            <p>The Mission of RCCG Rod of God Parish, Indianapolis is to bring people to the realization of the fulfillment of their God given dreams and potentials, \r\n                and to teach people the Word of God with integrity. We believe that the door of salvation is wide open and so are the doors to our church.\r\n                Our mission is to make heaven, to take many people with us, and to have a member of R.C.C.G. in every family of all nations.</p>\r\n        </div>\r\n        <div class=\"content light-colored-content\">\r\n            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, veniam dicta sapiente autem quos, \r\n            error ipsa iusto ullam voluptas animi quia, culpa magni placeat? Eius aperiam sequi aliquid ex accusamus.</p>\r\n        </div>\r\n        \r\n        <div class=\"content deep-colored-content\">\r\n           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. \r\n            Sint autem itaque ullam magni error soluta dolore laborum animi iure vitae impedit quaerat optio aperiam, harum maiores unde eaque ipsam ea.</p>\r\n        </div>\r\n        <div class=\"content light-colored-content\">\r\n            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.\r\n            Tempore aut maxime non tempora cum eaque voluptatibus et odio repellat, officia dolorem nemo dolorum dignissimos. \r\n            Eligendi quis sed veritatis architecto odio.</p>\r\n        </div>\r\n    </div>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -436,7 +436,7 @@ var AboutVisionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".page-breadcrumb {\r\n    height: 50vh;\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    width: 100%;\r\n    background-size: cover;\r\n    margin-top: -20px;\r\n}\r\n\r\n.btn, a{\r\n    color: #ff4081;\r\n    font-family: helvetica;\r\n    text-decoration: none;\r\n    text-transform: uppercase; \r\n}\r\n\r\n.page-nav {\r\n    display: inline-flex;\r\n    justify-content: center;\r\n    align-content: center;\r\n    align-self: center;\r\n    background: #212529;\r\n    width: 100%;\r\n    color: #fff;\r\n    font-weight: 500;\r\n    letter-spacing: 1px;\r\n    padding: 10px;\r\n}\r\n\r\n.page-nav .nav {\r\n    margin-left: 20px;\r\n    cursor: pointer;\r\n}\r\n\r\n.page-description {\r\n    justify-content: center;\r\n    align-content: center;\r\n    text-align: center;\r\n    padding-top: 60px;\r\n}\r\n\r\n.page-description .title {\r\n    font-weight: 400;\r\n    text-transform: uppercase;\r\n    color: #fff;\r\n    margin-top: 60px;\r\n}\r\n\r\n.page-description .content {\r\n    font-weight: 700;\r\n    text-transform: uppercase;\r\n    color: #fff;\r\n    font-size: 5rem;\r\n    letter-spacing: .5rem;\r\n    padding: 10px;\r\n}\r\n\r\n.page-nav-content {\r\n    margin-top: -23px;\r\n}"
+module.exports = ".page-breadcrumb {\r\n    height: 50vh;\r\n    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),\r\n                rgba(0,0,0,0.55) url('http://unsplash.it/1200x800') no-repeat center;\r\n    width: 100%;\r\n    background-size: cover;\r\n    margin-top: -20px;\r\n}\r\n\r\n.btn, a{\r\n    color: #ff4081;\r\n    font-family: helvetica;\r\n    text-decoration: none;\r\n    text-transform: uppercase; \r\n}\r\n\r\n.page-nav {\r\n    display: inline-flex;\r\n    justify-content: center;\r\n    align-content: center;\r\n    align-self: center;\r\n    background: #212529;\r\n    width: 100%;\r\n    color: #fff;\r\n    font-weight: 500;\r\n    letter-spacing: 1px;\r\n    padding: 10px;\r\n}\r\n\r\n.page-nav .nav {\r\n    margin-left: 20px;\r\n    cursor: pointer;\r\n}\r\n\r\n.page-description {\r\n    justify-content: center;\r\n    align-content: center;\r\n    text-align: center;\r\n    padding-top: 60px;\r\n}\r\n\r\n.page-description .title {\r\n    font-weight: 400;\r\n    text-transform: uppercase;\r\n    color: #fff;\r\n    margin-top: 60px;\r\n}\r\n\r\n.page-description .content {\r\n    font-weight: 700;\r\n    text-transform: uppercase;\r\n    color: #fff;\r\n    font-size: 5rem;\r\n    letter-spacing: .5rem;\r\n    padding: 10px;\r\n}\r\n"
 
 /***/ }),
 
@@ -447,7 +447,7 @@ module.exports = ".page-breadcrumb {\r\n    height: 50vh;\r\n    background: lin
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"about-page\">\r\n    <div class=\"page-breadcrumb\">\r\n        <app-top-nav [page]=\"page\"></app-top-nav>\r\n\r\n        <div class=\"page-description\">\r\n            <div class=\"title\">About</div>\r\n            <div class=\"content\">{{currentPage}}</div>\r\n        </div>\r\n    </div>\r\n    \r\n    <div class=\"page-nav\">\r\n        <div class=\"nav\" (click)=\"changePageContent('vision')\">Vision</div>\r\n        <div class=\"nav\" (click)=\"changePageContent('leadership')\">Leadership</div>\r\n    </div>\r\n\r\n    <div class=\"page-nav-content\">\r\n        <app-about-leadership *ngIf=\"!displayVision\"></app-about-leadership>\r\n        <app-about-vision *ngIf=\"displayVision\"></app-about-vision>\r\n    </div>\r\n    \r\n</div>"
+module.exports = "<app-top-nav [page]=\"page\"></app-top-nav>\r\n\r\n<div class=\"about-page\">\r\n    <div class=\"page-breadcrumb\">\r\n        <div class=\"page-description\">\r\n            <div class=\"title\">About</div>\r\n            <div class=\"content\">{{currentPage}}</div>\r\n        </div>\r\n    </div>\r\n    \r\n    <div class=\"page-nav\">\r\n        <div class=\"nav\" (click)=\"changePageContent('vision')\">Vision</div>\r\n        <div class=\"nav\" (click)=\"changePageContent('leadership')\">Leadership</div>\r\n    </div>\r\n\r\n    <div class=\"page-nav-content\">\r\n        <app-about-leadership *ngIf=\"!displayVision\"></app-about-leadership>\r\n        <app-about-vision *ngIf=\"displayVision\"></app-about-vision>\r\n    </div>\r\n</div>\r\n\r\n<app-bottom-footer></app-bottom-footer>"
 
 /***/ }),
 
@@ -878,8 +878,6 @@ var BlogComponent = /** @class */ (function () {
         var _this = this;
         this.blogService.getAllBlogs().subscribe(function (response) {
             _this.blogs = response.blogs;
-            _this.blogs.forEach(function (element) {
-            });
         });
     };
     BlogComponent.prototype.createBlog = function () {
@@ -1432,7 +1430,7 @@ module.exports = ".landing-content {\r\n    background: linear-gradient(rgba(0, 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"landing-content\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n    <div class=\"col-sm-8\">\r\n        <div class=\"header-one page-header\">Rod of God</div>\r\n        \r\n          <form>\r\n            <input [(ngModel)]=\"userProfile.address\" name = \"address\" type=\"text\" placeholder=\"Enter your Address\">\r\n            <button (click)=\"getMembersAround($event)\" class=\"submit\" type=\"submit\">Request Ride</button>\r\n          </form>\r\n\r\n          <div class=\"rog-text-error\" *ngIf=\"errorMessage\">\r\n            <div>{{errorMessage}}</div>\r\n          </div>\r\n\r\n          <div class=\"app-routes\">\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('about')\">about</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('livesermon')\">live sermon</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('give')\">give</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('blog')\">blog</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('messagestore')\">message store</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('musicstore')\">music store</button>\r\n          </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<div class=\"landing-content\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n    <div class=\"col-sm-8\">\r\n        <div class=\"header-one page-header\">Rod of God</div>\r\n        \r\n          <form>\r\n            <input [(ngModel)]=\"userProfile.address\" name = \"address\" type=\"text\" placeholder=\"Enter your Address\">\r\n            <button (click)=\"getMembersAround($event)\" class=\"submit\" type=\"submit\">Request Ride</button>\r\n          </form>\r\n\r\n          <div class=\"rog-text-error\" *ngIf=\"errorMessage\">\r\n            <div>{{errorMessage}}</div>\r\n          </div>\r\n\r\n          <div class=\"app-routes\">\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('about')\">about</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('livesermon')\">live sermon</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('give')\">give</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('blog')\">Rog Feed</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('messagestore')\">message store</button>\r\n              <button class=\"route-link-button\" mat-button (click)=\"navigate('musicstore')\">music store</button>\r\n          </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-sm-2\"></div>\r\n\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -1796,6 +1794,69 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/app/shared/bottom-footer/bottom-footer.component.css":
+/*!******************************************************************!*\
+  !*** ./src/app/shared/bottom-footer/bottom-footer.component.css ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/shared/bottom-footer/bottom-footer.component.html":
+/*!*******************************************************************!*\
+  !*** ./src/app/shared/bottom-footer/bottom-footer.component.html ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/shared/bottom-footer/bottom-footer.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/shared/bottom-footer/bottom-footer.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: BottomFooterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BottomFooterComponent", function() { return BottomFooterComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var BottomFooterComponent = /** @class */ (function () {
+    function BottomFooterComponent() {
+    }
+    BottomFooterComponent.prototype.ngOnInit = function () {
+    };
+    BottomFooterComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-bottom-footer',
+            template: __webpack_require__(/*! ./bottom-footer.component.html */ "./src/app/shared/bottom-footer/bottom-footer.component.html"),
+            styles: [__webpack_require__(/*! ./bottom-footer.component.css */ "./src/app/shared/bottom-footer/bottom-footer.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], BottomFooterComponent);
+    return BottomFooterComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/shared.component.css":
 /*!*********************************************!*\
   !*** ./src/app/shared/shared.component.css ***!
@@ -1872,12 +1933,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _top_nav_top_nav_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./top-nav/top-nav.component */ "./src/app/shared/top-nav/top-nav.component.ts");
+/* harmony import */ var _bottom_footer_bottom_footer_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bottom-footer/bottom-footer.component */ "./src/app/shared/bottom-footer/bottom-footer.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1889,8 +1952,11 @@ var SharedModule = /** @class */ (function () {
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
             ],
-            declarations: [_top_nav_top_nav_component__WEBPACK_IMPORTED_MODULE_2__["TopNavComponent"]],
-            exports: [_top_nav_top_nav_component__WEBPACK_IMPORTED_MODULE_2__["TopNavComponent"]]
+            declarations: [
+                _top_nav_top_nav_component__WEBPACK_IMPORTED_MODULE_2__["TopNavComponent"],
+                _bottom_footer_bottom_footer_component__WEBPACK_IMPORTED_MODULE_3__["BottomFooterComponent"]
+            ],
+            exports: [_top_nav_top_nav_component__WEBPACK_IMPORTED_MODULE_2__["TopNavComponent"], _bottom_footer_bottom_footer_component__WEBPACK_IMPORTED_MODULE_3__["BottomFooterComponent"]]
         })
     ], SharedModule);
     return SharedModule;
@@ -1907,7 +1973,7 @@ var SharedModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".app-navigation {\r\n    background: #4D1818;\r\n    padding: 10px;\r\n}\r\n\r\n.nav-wrapper {\r\n    margin-bottom: 90px;\r\n}\r\n\r\n.app-navigation .nav-link {\r\n    color: #fff;\r\n    font-size: 20px;\r\n    letter-spacing: .4rem;\r\n    cursor: pointer;\r\n}\r\n\r\n.app-navigation .nav-link:hover {\r\n    background: #fff;\r\n    color: #000;\r\n}\r\n\r\n.app-navigation .active {\r\n    background: #fff;\r\n    color: #000;\r\n    outline-color: #4D1818;\r\n    border: 2px solid #4D1818;\r\n}"
+module.exports = ".app-navigation {\r\n    background: #4D1818;\r\n    padding: 10px;\r\n}\r\n\r\n.nav-wrapper {\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.app-navigation .nav-link {\r\n    color: #fff;\r\n    font-size: 20px;\r\n    letter-spacing: .4rem;\r\n    cursor: pointer;\r\n}\r\n\r\n.app-navigation .nav-link:hover {\r\n    background: #fff;\r\n    color: #000;\r\n}\r\n\r\n.app-navigation .active {\r\n    background: #fff;\r\n    color: #000;\r\n    outline-color: #4D1818;\r\n    border: 2px solid #4D1818;\r\n}"
 
 /***/ }),
 
