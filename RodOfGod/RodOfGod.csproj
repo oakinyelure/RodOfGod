@@ -329,6 +329,7 @@
     <Compile Include="Handlers\BlogHandler\CreateBlogHandler.cs" />
     <Compile Include="Handlers\BlogHandler\GetAllBlogsHandler.cs" />
     <Compile Include="Models\Blog\BlogList.cs" />
+    <Compile Include="Models\User\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -441,7 +442,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="NgDebug" BeforeTargets="Build" Condition="'$(Configuration)' == 'Debug'">
-    <Exec WorkingDirectory="$(ProjectDir)frontend" Command="ng build --extract-css" />
+    <Exec WorkingDirectory="$(ProjectDir)frontend" Command="ng build" />
   </Target>
   <Target Name="NgDev" BeforeTargets="Build" Condition="'$(Configuration)' == 'Dev'">
     <Message Text="ng build - dev" />
