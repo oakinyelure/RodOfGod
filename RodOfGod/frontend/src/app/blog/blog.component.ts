@@ -24,9 +24,6 @@ export class BlogComponent implements OnInit {
 
     this.blogService.getAllBlogs().subscribe(response => {
       this.blogs = response.blogs;
-      this.blogs.forEach(element => {
-
-      });
     });
   }
 
