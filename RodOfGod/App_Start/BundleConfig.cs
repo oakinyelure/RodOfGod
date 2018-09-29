@@ -10,9 +10,7 @@ namespace RodOfGod
         {
             bundles.Add(new Bundle("~/AngularBundles/ScriptBundle").Include(
                 "~/AngularBundles/runtime.*",
-                "~/AngularBundles/inline.*",
                 "~/AngularBundles/polyfills.*",
-                "~/AngularBundles/scripts.*",
                 "~/AngularBundles/vendor.*",
                 "~/AngularBundles/main.*"
                 ));

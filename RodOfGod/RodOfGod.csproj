@@ -338,23 +338,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AngularBundles\3rdpartylicenses.txt" />
-    <Content Include="AngularBundles\color.png" />
-    <Content Include="AngularBundles\favicon.ico" />
-    <Content Include="AngularBundles\index.html" />
-    <Content Include="AngularBundles\line.gif" />
-    <Content Include="AngularBundles\main.js" />
-    <Content Include="AngularBundles\open-sans-v15-latin-300.svg" />
-    <Content Include="AngularBundles\open-sans-v15-latin-700.svg" />
-    <Content Include="AngularBundles\open-sans-v15-latin-regular.svg" />
-    <Content Include="AngularBundles\polyfills.js" />
-    <Content Include="AngularBundles\primeicons.svg" />
-    <Content Include="AngularBundles\runtime.js" />
-    <Content Include="AngularBundles\scripts.js" />
-    <Content Include="AngularBundles\styles.js" />
-    <Content Include="AngularBundles\vendor.js" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="DataContexts\RogDb.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RogDb.Context.cs</LastGenOutput>
@@ -380,27 +363,7 @@
     <Content Include="DataContexts\RogDb.edmx.diagram">
       <DependentUpon>RogDb.edmx</DependentUpon>
     </Content>
-    <Content Include="AngularBundles\main.js.map" />
-    <Content Include="AngularBundles\open-sans-v15-latin-300.eot" />
-    <Content Include="AngularBundles\open-sans-v15-latin-300.ttf" />
-    <Content Include="AngularBundles\open-sans-v15-latin-300.woff" />
-    <Content Include="AngularBundles\open-sans-v15-latin-300.woff2" />
-    <Content Include="AngularBundles\open-sans-v15-latin-700.eot" />
-    <Content Include="AngularBundles\open-sans-v15-latin-700.ttf" />
-    <Content Include="AngularBundles\open-sans-v15-latin-700.woff" />
-    <Content Include="AngularBundles\open-sans-v15-latin-700.woff2" />
-    <Content Include="AngularBundles\open-sans-v15-latin-regular.eot" />
-    <Content Include="AngularBundles\open-sans-v15-latin-regular.ttf" />
-    <Content Include="AngularBundles\open-sans-v15-latin-regular.woff" />
-    <Content Include="AngularBundles\open-sans-v15-latin-regular.woff2" />
-    <Content Include="AngularBundles\polyfills.js.map" />
-    <Content Include="AngularBundles\primeicons.eot" />
-    <Content Include="AngularBundles\primeicons.ttf" />
-    <Content Include="AngularBundles\primeicons.woff" />
-    <Content Include="AngularBundles\runtime.js.map" />
-    <Content Include="AngularBundles\scripts.js.map" />
-    <Content Include="AngularBundles\styles.js.map" />
-    <Content Include="AngularBundles\vendor.js.map" />
+
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -487,17 +450,7 @@
   <Target Name="NgRelease" BeforeTargets="Build" Condition="'$(Configuration)' == 'Release'">
     <Exec WorkingDirectory="$(ProjectDir)frontend" Command="ng build --configuration=production" />
   </Target>
-  <Target Name="AfterNgDebug" AfterTargets="NgDebug" BeforeTargets="Build" Condition="'$(Configuration)' == 'Debug'">
-    <Exec WorkingDirectory="$(ProjectDir)" Command="xcopy /E /C /Y /I &quot;$(ProjectDir)AngularBundles\assets&quot; &quot;$(ProjectDir)assets&quot; " />
-    <ItemGroup>
-      <Content Include="AngularBundles\**\*.*">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
-      <Content Include="assets\**\*.*">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
-    </ItemGroup>
-  </Target>
+
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
